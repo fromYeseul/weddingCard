@@ -1,0 +1,382 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: "NotoSansKR", sans-serif;
+  font-weight: normal;
+  letter-spacing: -0.5px;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+}
+body * {
+  box-sizing: border-box;
+}
+
+ul, ol, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #29292c;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input, select, textarea, fieldset, button {
+  outline: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  min-width: auto;
+  border: 0;
+  font-family: "NotoSansKR", sans-serif;
+  font-weight: normal;
+  letter-spacing: -0.5px;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+img {
+  display: inline-block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "NotoSansKR";
+  font-style: thin;
+  font-weight: 100;
+  src: url(../font/NotoSansKR-Thin.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "NotoSansKR";
+  font-style: light;
+  font-weight: 300;
+  src: url(../font/NotoSansKR-Light.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "NotoSansKR";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../font/NotoSansKR-Regular.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "NotoSansKR";
+  font-style: medium;
+  font-weight: 500;
+  src: url(../font/NotoSansKR-Medium.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "NotoSansKR";
+  font-style: bold;
+  font-weight: 700;
+  src: url(../font/NotoSansKR-Bold.woff) format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "NotoSansKR";
+  font-style: black;
+  font-weight: 900;
+  src: url(../font/NotoSansKR-Black.woff) format("woff");
+}
+body {
+  max-width: 47.4375rem;
+  min-width: 22.5rem;
+}
+
+section.cover {
+  padding: 6.25rem 15vw;
+  height: 80vh;
+  border-bottom-left-radius: 6.25rem;
+  border-bottom-right-radius: 6.25rem;
+  background: url(../img/mainBg.jpg) no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.4);
+  position: relative;
+  z-index: 10;
+}
+section.contWrapper {
+  background: #f8f9f8;
+}
+
+.cover .wrapper {
+  text-align: center;
+}
+.cover .upper,
+.cover .sub {
+  color: #edd2ad;
+}
+.cover .main {
+  margin-top: 6vh;
+  padding: 0 3.75rem;
+}
+.cover .main .date {
+  margin: 0 auto;
+  padding: 0 1.25rem;
+  max-width: 9.375rem;
+}
+.cover .main h1 {
+  font-size: 3.125rem;
+  font-weight: normal;
+  text-align: left;
+}
+.cover .main h1.day {
+  text-align: right;
+  position: relative;
+}
+.cover .main h1.day::before {
+  content: "";
+  width: 1px;
+  height: 25px;
+  background: black;
+  opacity: 0.6;
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: rotate(30deg) translateX(-50%);
+}
+.cover .main .name {
+  margin-top: 8vh;
+  font-size: 1rem;
+}
+.cover .main .name span {
+  font-size: 0.75rem;
+}
+.cover .sub {
+  margin-top: 3vh;
+}
+
+.contWrapper > div {
+  padding: 3.75rem 1.875rem;
+}
+.contWrapper > div.ending {
+  padding-bottom: 11.25rem;
+}
+.contWrapper h3 {
+  color: #acb0b6;
+  font-size: 1rem;
+  font-weight: normal;
+  position: relative;
+}
+.contWrapper h3::after {
+  content: "";
+  width: 8px;
+  height: 2px;
+  background: #acb0b6;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+}
+.contWrapper .cont {
+  margin-top: 4.375rem;
+  color: #656b75;
+}
+
+.invitation .greeting {
+  margin-top: 1.5625rem;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+.invitation .info {
+  margin-top: 5rem;
+  font-size: 0.75rem;
+  text-align: right;
+}
+.invitation .info .space {
+  margin-top: 1.875rem;
+}
+.invitation button {
+  display: block;
+  margin: 0 auto;
+  margin-top: 4.375rem;
+  padding: 0.75rem 1.875rem;
+  color: #fff;
+  border-radius: 2.1875rem;
+  background: #acb0b6;
+}
+
+.gallery {
+  background: #fff;
+}
+.gallery .photo {
+  margin-top: 2.5rem;
+}
+.gallery .photo ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.gallery .photo li {
+  flex: 1 1 45%;
+  max-width: 15.625rem;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+.gallery .photo li:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+.gallery .photo li img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: grayscale(1);
+}
+
+.calendar .cont {
+  padding: 0 0.9375rem;
+  text-align: center;
+}
+.calendar .month {
+  font-size: 1.25rem;
+}
+.calendar table {
+  margin: 3.75rem 0;
+  width: 100%;
+}
+.calendar table td {
+  padding: 15px 0;
+}
+.calendar table td.dDay {
+  color: #fff;
+  position: relative;
+}
+.calendar table td.dDay span {
+  position: relative;
+  z-index: 10;
+}
+.calendar table td.dDay .heartWrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -35%);
+}
+.calendar table td .heart {
+  width: 16px;
+  height: 16px;
+  background: #656b75;
+  position: relative;
+  transform: rotate(45deg);
+}
+.calendar table td .heart::before, .calendar table td .heart::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: -50%;
+  border-radius: 50%;
+  background: #656b75;
+}
+.calendar table td .heart::after {
+  left: 0;
+  top: -50%;
+}
+
+.save {
+  padding: 1.875rem 0;
+  font-size: 1.125rem;
+  text-align: center;
+  text-transform: uppercase;
+  background: #fff;
+}
+
+.traffic .info {
+  margin-bottom: 1.875rem;
+}
+.traffic .map {
+  margin: 3.125rem -30px;
+}
+
+.account .accWrap {
+  margin-top: 2.5rem;
+}
+.account .accBox {
+  width: 100%;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid #acb0b6;
+}
+.account .accBox.is-active {
+  padding: 0;
+}
+.account .accBox.is-active .accHead {
+  padding: 0.625rem;
+  border-bottom: 1px solid #acb0b6;
+}
+.account .accBox.is-active .accHead::after {
+  top: 45%;
+  transform: rotate(180deg);
+}
+.account .accBox.is-active .accBody {
+  display: block;
+}
+.account .accBox + .accBox {
+  margin-top: 1.25rem;
+}
+.account .accHead {
+  padding: 0.625rem;
+  position: relative;
+}
+.account .accHead::after {
+  content: "";
+  width: 9px;
+  height: 6px;
+  background: url(../img/arrow.png) no-repeat;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.account .accBody {
+  display: none;
+  padding: 0 1.25rem;
+  text-align: left;
+}
+.account .accBody li {
+  padding: 1.25rem 0;
+  line-height: 30px;
+  position: relative;
+}
+.account .accBody li + li {
+  border-top: 1px solid #acb0b6;
+}
+.account .accBody button {
+  padding: 0.5625rem;
+  color: #656b75;
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid #acb0b6;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.ending {
+  text-align: center;
+  color: #acb0b6;
+  background: url(../img/endBg.png) no-repeat;
+  background-position: center bottom 0;
+}
+
+/*# sourceMappingURL=style.css.map */
