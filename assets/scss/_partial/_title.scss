@@ -14,7 +14,7 @@ $black : #222;
 
 section{
     &.cover{
-        padding: rem(100) 15vw;
+        padding: 10vh 15vw;
         height: 80vh;
         border-bottom-left-radius: rem(100);
         border-bottom-right-radius: rem(100);
@@ -39,6 +39,9 @@ section{
     .upper,
     .sub{
         color: $pointColor;
+        font-family: 'Great Vibes', cursive;
+        p{
+        }
     }
     .main{
         margin-top: 6vh;
@@ -52,7 +55,7 @@ section{
             font-weight: 500;
         }
         h1{
-            font-size: rem(50);
+            font-size: 10vw;
             font-weight: normal;
             text-align: left;
             &.day{
@@ -72,10 +75,10 @@ section{
             }
         }
         .name{
-            margin-top: 8vh;
-            font-size: rem(16);
+            margin-top: 7vh;
+            font-size: 4vw;
             span{
-                font-size: rem(12);
+                font-size: 3vw;
             }
         }
     }
@@ -89,13 +92,15 @@ section{
     > div{        
         padding: rem(60) rem(30);
         &.ending{
-            padding-bottom: rem(180);
+            padding-bottom: rem(180);            
+            letter-spacing: 1px;
+            font-family: 'Great Vibes', cursive;
         }
     }
     h3{
         color: $secondaryColor;
         font-family: 'NotoSansKR', sans-serif;
-        font-size: rem(16);
+        font-size: 3vw;
         font-weight: normal;
         position: relative;
         &::after{
@@ -118,12 +123,13 @@ section{
 .invitation{
     .greeting{
         margin-top: rem(25);
-        font-size: rem(12);
-        line-height: rem(20);
+        font-size: 3vw;
+        line-height: 5vh;
     }
     .info{
         margin-top: rem(80);
-        font-size: rem(12);
+        font-size: 3vw;
+        line-height: 5vh;
         text-align: right;
         .space{
             margin-top: rem(30);
@@ -183,7 +189,7 @@ section{
         text-align: center;
     }
     .month{
-        font-size: rem(20);
+        font-size: 5vw;
     }
     table{
         margin: rem(60) 0;
@@ -232,8 +238,9 @@ section{
 
 //save
 .save{
-    padding: rem(30) 0;
-    font-size: rem(18);
+    padding: 1.875rem 0 !important;
+    font-size: 4vw;
+    letter-spacing: 3px;
     text-align: center;
     text-transform: uppercase;
     background: $white;
@@ -241,6 +248,10 @@ section{
 
 //교통
 .traffic{
+    .means{
+        font-size: 3vw;
+        // font-family: "NotoSansKR", sans-serif;
+    }
     .info{
         line-height: 24px;
         margin-bottom: rem(30);
@@ -258,6 +269,7 @@ section{
     .accBox{
         width: 100%;
         text-align: center;
+        background: $white;
         border-radius: 6px;
         border: 1px solid $secondaryColor;
         &.is-active{

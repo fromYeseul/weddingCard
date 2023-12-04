@@ -71,7 +71,7 @@ body {
 }
 
 section.cover {
-  padding: 6.25rem 15vw;
+  padding: 10vh 15vw;
   height: 80vh;
   border-bottom-left-radius: 6.25rem;
   border-bottom-right-radius: 6.25rem;
@@ -92,6 +92,7 @@ section.contWrapper {
 .cover .upper,
 .cover .sub {
   color: #edd2ad;
+  font-family: "Great Vibes", cursive;
 }
 .cover .main {
   margin-top: 6vh;
@@ -105,7 +106,7 @@ section.contWrapper {
   font-weight: 500;
 }
 .cover .main h1 {
-  font-size: 3.125rem;
+  font-size: 10vw;
   font-weight: normal;
   text-align: left;
 }
@@ -125,11 +126,11 @@ section.contWrapper {
   transform: rotate(30deg) translateX(-50%);
 }
 .cover .main .name {
-  margin-top: 8vh;
-  font-size: 1rem;
+  margin-top: 7vh;
+  font-size: 4vw;
 }
 .cover .main .name span {
-  font-size: 0.75rem;
+  font-size: 3vw;
 }
 .cover .sub {
   margin-top: 3vh;
@@ -140,11 +141,13 @@ section.contWrapper {
 }
 .contWrapper > div.ending {
   padding-bottom: 11.25rem;
+  letter-spacing: 1px;
+  font-family: "Great Vibes", cursive;
 }
 .contWrapper h3 {
   color: #acb0b6;
   font-family: "NotoSansKR", sans-serif;
-  font-size: 1rem;
+  font-size: 3vw;
   font-weight: normal;
   position: relative;
 }
@@ -164,12 +167,13 @@ section.contWrapper {
 
 .invitation .greeting {
   margin-top: 1.5625rem;
-  font-size: 0.75rem;
-  line-height: 1.25rem;
+  font-size: 3vw;
+  line-height: 5vh;
 }
 .invitation .info {
   margin-top: 5rem;
-  font-size: 0.75rem;
+  font-size: 3vw;
+  line-height: 5vh;
   text-align: right;
 }
 .invitation .info .space {
@@ -223,7 +227,7 @@ section.contWrapper {
   text-align: center;
 }
 .calendar .month {
-  font-size: 1.25rem;
+  font-size: 5vw;
 }
 .calendar table {
   margin: 3.75rem 0;
@@ -268,13 +272,17 @@ section.contWrapper {
 }
 
 .save {
-  padding: 1.875rem 0;
-  font-size: 1.125rem;
+  padding: 1.875rem 0 !important;
+  font-size: 4vw;
+  letter-spacing: 3px;
   text-align: center;
   text-transform: uppercase;
   background: #fff;
 }
 
+.traffic .means {
+  font-size: 3vw;
+}
 .traffic .info {
   line-height: 24px;
   margin-bottom: 1.875rem;
@@ -289,6 +297,7 @@ section.contWrapper {
 .account .accBox {
   width: 100%;
   text-align: center;
+  background: #fff;
   border-radius: 6px;
   border: 1px solid #acb0b6;
 }
