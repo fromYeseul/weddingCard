@@ -349,10 +349,14 @@ section .sub {
 }
 .traffic .map {
   margin: 3.125rem -30px;
+  margin-bottom: 0;
   width: calc(100% + 60px);
   height: 300px;
 }
 
+.account {
+  padding-top: 0;
+}
 .account .accWrap {
   margin-top: 2.5rem;
 }
