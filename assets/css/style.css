@@ -70,7 +70,7 @@ body {
 }
 
 section.cover {
-  padding: 10vh 15vw;
+  padding: 15vh 15vw;
   height: 80vh;
   border-bottom-left-radius: 6.25rem;
   border-bottom-right-radius: 6.25rem;
@@ -84,9 +84,15 @@ section.cover {
 section.contWrapper {
   background: #f8f9f8;
 }
+section .upper,
+section .sub {
+  text-align: center;
+  color: #edd2ad;
+  font-family: "Great Vibes", cursive;
+}
 
 .arch {
-  height: 20px;
+  height: 24px;
   position: relative;
 }
 .arch span {
@@ -127,12 +133,8 @@ section.contWrapper {
 .cover .wrapper {
   text-align: center;
 }
-.cover .upper,
-.cover .sub {
-  color: #edd2ad;
-}
-.cover .upper {
-  font-family: "Great Vibes", cursive;
+.cover .year {
+  font-family: "Gowun Batang", serif;
 }
 .cover .main {
   margin-top: 6vh;
@@ -146,7 +148,7 @@ section.contWrapper {
   font-weight: 500;
 }
 .cover .main h1 {
-  font-size: 10vw;
+  font-size: 3.125rem;
   font-weight: normal;
   text-align: left;
 }
@@ -167,10 +169,9 @@ section.contWrapper {
 }
 .cover .main .name {
   margin-top: 7vh;
-  font-size: 4vw;
 }
 .cover .main .name span {
-  font-size: 3vw;
+  font-size: 1rem;
 }
 .cover .sub {
   margin-top: 3vh;
@@ -186,9 +187,10 @@ section.contWrapper {
 }
 .contWrapper h3 {
   color: #acb0b6;
+  font-size: 1rem;
   font-family: "NotoSansKR", sans-serif;
-  font-size: 3vw;
   font-weight: normal;
+  text-transform: uppercase;
   position: relative;
 }
 .contWrapper h3::after {
@@ -201,19 +203,17 @@ section.contWrapper {
   left: 0;
 }
 .contWrapper .cont {
-  margin-top: 4.375rem;
+  margin-top: 3.125rem;
   color: #656b75;
 }
 
 .invitation .greeting {
   margin-top: 1.5625rem;
-  font-size: 3vw;
-  line-height: 5vh;
+  line-height: 1.6;
 }
 .invitation .info {
   margin-top: 5rem;
-  font-size: 3vw;
-  line-height: 5vh;
+  line-height: 1.6;
   text-align: right;
 }
 .invitation .info .space {
@@ -225,6 +225,7 @@ section.contWrapper {
   margin-top: 4.375rem;
   padding: 0.75rem 1.875rem;
   color: #fff;
+  font-size: 1.125rem;
   border-radius: 2.1875rem;
   background: #acb0b6;
 }
@@ -263,11 +264,12 @@ section.contWrapper {
 }
 
 .calendar .cont {
+  margin-top: 0.625rem;
   padding: 0 0.9375rem;
   text-align: center;
 }
 .calendar .month {
-  font-size: 5vw;
+  font-size: 1.5rem;
 }
 .calendar table {
   margin: 3.75rem 0;
@@ -310,10 +312,12 @@ section.contWrapper {
   left: 0;
   top: -50%;
 }
+.calendar .wDay {
+  font-weight: bold;
+}
 
 .save {
   padding: 1.875rem 0 !important;
-  font-size: 4vw;
   letter-spacing: 3px;
   text-align: center;
   text-transform: uppercase;
@@ -321,7 +325,7 @@ section.contWrapper {
 }
 
 .traffic .means {
-  font-size: 3vw;
+  color: #acb0b6;
 }
 .traffic .info {
   line-height: 24px;
@@ -386,7 +390,7 @@ section.contWrapper {
   border-top: 1px solid #acb0b6;
 }
 .account .accBody button {
-  padding: 0.5625rem;
+  padding: 0.1875rem 0.5625rem;
   color: #656b75;
   background: transparent;
   border-radius: 4px;
@@ -400,8 +404,8 @@ section.contWrapper {
 .ending {
   text-align: center;
   color: #acb0b6;
-  background: url(../img/endBg.png) no-repeat;
-  background-position: center bottom 0;
+  background: url(../img/endBg.png) bottom center;
+  background-repeat-y: no-repeat;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,7 +14,7 @@ $black : #222;
 
 section{
     &.cover{
-        padding: 10vh 15vw;
+        padding: 15vh 15vw;
         height: 80vh;
         border-bottom-left-radius: rem(100);
         border-bottom-right-radius: rem(100);
@@ -28,11 +28,17 @@ section{
     &.contWrapper{
         background: $bgColor;
     }
+    .upper,
+    .sub{
+        text-align: center;
+        color: $pointColor;
+        font-family: 'Great Vibes', cursive;
+    }
 }
 
 //weddingday
 .arch{
-    height: 20px;
+    height: 24px;
     position: relative;
     span{
         position: absolute;
@@ -57,12 +63,8 @@ section{
         text-align: center;
         // background: rgba(0,0,0,0.2);
     }
-    .upper,
-    .sub{
-        color: $pointColor;
-    }
-    .upper{
-        font-family: 'Great Vibes', cursive;
+    .year{
+        font-family: 'Gowun Batang', serif;
     }
     .main{
         margin-top: 6vh;
@@ -76,7 +78,7 @@ section{
             font-weight: 500;
         }
         h1{
-            font-size: 10vw;
+            font-size: rem(50);
             font-weight: normal;
             text-align: left;
             &.day{
@@ -97,9 +99,8 @@ section{
         }
         .name{
             margin-top: 7vh;
-            font-size: 4vw;
             span{
-                font-size: 3vw;
+                font-size: rem(16);
             }
         }
     }
@@ -120,9 +121,10 @@ section{
     }
     h3{
         color: $secondaryColor;
+        font-size: rem(16);
         font-family: 'NotoSansKR', sans-serif;
-        font-size: 3vw;
         font-weight: normal;
+        text-transform: uppercase;
         position: relative;
         &::after{
             content:'';
@@ -135,7 +137,7 @@ section{
         }
     }
     .cont{
-        margin-top: rem(70);
+        margin-top: rem(50);
         color: $mainColor;
     }    
 }
@@ -144,13 +146,11 @@ section{
 .invitation{
     .greeting{
         margin-top: rem(25);
-        font-size: 3vw;
-        line-height: 5vh;
+        line-height: 1.6;
     }
     .info{
         margin-top: rem(80);
-        font-size: 3vw;
-        line-height: 5vh;
+        line-height: 1.6;
         text-align: right;
         .space{
             margin-top: rem(30);
@@ -162,6 +162,7 @@ section{
         margin-top: rem(70);
         padding: rem(12) rem(30);
         color: $white;
+        font-size: rem(18);
         border-radius: rem(35);
         background: $secondaryColor;
     }
@@ -206,11 +207,12 @@ section{
 //달력
 .calendar{
     .cont{
+        margin-top: rem(10);
         padding: 0 rem(15);
         text-align: center;
     }
     .month{
-        font-size: 5vw;
+        font-size: rem(24);
     }
     table{
         margin: rem(60) 0;
@@ -255,12 +257,14 @@ section{
             }
         }
     }
+    .wDay{
+        font-weight: bold;
+    }
 }
 
 //save
 .save{
     padding: 1.875rem 0 !important;
-    font-size: 4vw;
     letter-spacing: 3px;
     text-align: center;
     text-transform: uppercase;
@@ -270,7 +274,7 @@ section{
 //교통
 .traffic{
     .means{
-        font-size: 3vw;
+        color: $secondaryColor;
         // font-family: "NotoSansKR", sans-serif;   
     }
     .info{
@@ -338,7 +342,7 @@ section{
             }
         }
         button{
-            padding: rem(9);
+            padding: rem(3) rem(9);
             color: $mainColor;
             background: transparent;
             border-radius: 4px;
@@ -355,6 +359,6 @@ section{
 .ending{
     text-align: center;
     color: $secondaryColor;
-    background: url(../img/endBg.png) no-repeat;
-    background-position: center bottom 0;
+    background: url(../img/endBg.png) bottom center;
+    background-repeat-y: no-repeat;
 }
