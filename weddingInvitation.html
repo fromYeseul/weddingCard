@@ -7,6 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Great+Vibes&family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">
+
+    
     <title>초대합니다 | 문명수 ♡ 박예슬</title>
 </head>
 <body>
@@ -197,15 +199,13 @@
                     <div class="means">지하철</div>
                     <div class="info">[ 부산 1, 3호선 연산역 ] 7번 출구 도보 1분</div>
                     <div class="means">버스</div>
-                    <div class="info">29, 51, 179, 189</div>
+                    <div class="info">29, 51, 179, 189 연산역(연산교차로) 하차</div>
                     <div class="means">주소</div>
                     <div class="info">
                         부산 연제구 중앙대로 1125 시티타워<br>목화웨딩컨벤션 15F 벨리스홀
                     </div>
                 </div>
-                <div class="map">
-                    <img src="https://via.placeholder.com/400x250/ccc/fff?text=map" alt="">
-                </div>
+                <div id="map" class="map"></div>
             </div>
         </div>
         <!--//교통-->
@@ -273,5 +273,23 @@
         </div>
         <!--//끝-->
     </section>
+
+    <!--카카오지도 api-->
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=accb173c11a2b0967e7e4dabe0152d0a"></script>
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(35.186659, 129.081317),
+			level: 4
+		};
+
+		var map = new kakao.maps.Map(container, options);
+        var markerPosition  = new kakao.maps.LatLng(35.188011, 129.080464); 
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+
+        marker.setMap(map);
+	</script>
 </body>
 </html>

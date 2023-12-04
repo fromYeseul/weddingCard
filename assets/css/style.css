@@ -68,6 +68,22 @@ h1, h2, h3, h4, h5, h6, p {
 body {
   min-width: 22.5rem;
 }
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+body::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #f8f9f8;
+}
+body::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+  background-color: #acb0b6;
+}
+body::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+}
 
 section.cover {
   padding: 15vh 15vw;
@@ -333,6 +349,8 @@ section .sub {
 }
 .traffic .map {
   margin: 3.125rem -30px;
+  width: calc(100% + 60px);
+  height: 300px;
 }
 
 .account .accWrap {

@@ -1,7 +1,4 @@
-body{
-    // max-width: rem(759);
-    min-width: rem(360);
-}
+
 
 //메인컬러
 $mainColor : #656b75;
@@ -11,6 +8,30 @@ $bgColor : #f8f9f8;
 
 $white: #fff;
 $black : #222;
+
+
+body{
+    // max-width: rem(759);
+    min-width: rem(360);
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: $bgColor;
+    }
+    &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        background-color: $secondaryColor;
+    }
+    &::-webkit-scrollbar-button {
+        width: 0;
+        height: 0;
+    }
+}
+
+
 
 section{
     &.cover{
@@ -283,6 +304,8 @@ section{
     }
     .map{
         margin: rem(50) -30px;
+        width: calc(100% + 60px);
+        height: 300px;
     }
 }
 
