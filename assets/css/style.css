@@ -2,7 +2,7 @@ body, html {
   margin: 0;
   padding: 0;
   color: #000;
-  font-family: "NotoSansKR", sans-serif;
+  font-family: "Gowun Batang", serif;
   font-weight: normal;
   letter-spacing: -0.5px;
 }
@@ -33,7 +33,7 @@ input, select, textarea, fieldset, button {
   width: auto;
   min-width: auto;
   border: 0;
-  font-family: "NotoSansKR", sans-serif;
+  font-family: "Gowun Batang", serif;
   font-weight: normal;
   letter-spacing: -0.5px;
 }
@@ -54,20 +54,6 @@ h1, h2, h3, h4, h5, h6, p {
 @font-face {
   font-display: swap;
   font-family: "NotoSansKR";
-  font-style: thin;
-  font-weight: 100;
-  src: url(../font/NotoSansKR-Thin.woff) format("woff");
-}
-@font-face {
-  font-display: swap;
-  font-family: "NotoSansKR";
-  font-style: light;
-  font-weight: 300;
-  src: url(../font/NotoSansKR-Light.woff) format("woff");
-}
-@font-face {
-  font-display: swap;
-  font-family: "NotoSansKR";
   font-style: normal;
   font-weight: 400;
   src: url(../font/NotoSansKR-Regular.woff) format("woff");
@@ -78,20 +64,6 @@ h1, h2, h3, h4, h5, h6, p {
   font-style: medium;
   font-weight: 500;
   src: url(../font/NotoSansKR-Medium.woff) format("woff");
-}
-@font-face {
-  font-display: swap;
-  font-family: "NotoSansKR";
-  font-style: bold;
-  font-weight: 700;
-  src: url(../font/NotoSansKR-Bold.woff) format("woff");
-}
-@font-face {
-  font-display: swap;
-  font-family: "NotoSansKR";
-  font-style: black;
-  font-weight: 900;
-  src: url(../font/NotoSansKR-Black.woff) format("woff");
 }
 body {
   max-width: 47.4375rem;
@@ -129,6 +101,8 @@ section.contWrapper {
   margin: 0 auto;
   padding: 0 1.25rem;
   max-width: 9.375rem;
+  font-family: "Hedvig Letters Serif", serif;
+  font-weight: 500;
 }
 .cover .main h1 {
   font-size: 3.125rem;
@@ -169,6 +143,7 @@ section.contWrapper {
 }
 .contWrapper h3 {
   color: #acb0b6;
+  font-family: "NotoSansKR", sans-serif;
   font-size: 1rem;
   font-weight: normal;
   position: relative;
@@ -301,6 +276,7 @@ section.contWrapper {
 }
 
 .traffic .info {
+  line-height: 24px;
   margin-bottom: 1.875rem;
 }
 .traffic .map {
