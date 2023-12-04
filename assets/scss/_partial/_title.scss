@@ -1,5 +1,5 @@
 body{
-    max-width: rem(759);
+    // max-width: rem(759);
     min-width: rem(360);
 }
 
@@ -30,6 +30,27 @@ section{
     }
 }
 
+//weddingday
+.arch{
+    height: 20px;
+    position: relative;
+    span{
+        position: absolute;
+        transform-origin: center 7.89474em 0px;
+    }
+    .w{transform: rotate(-17.157deg);}
+    .e{transform: rotate(-13.4275deg);}
+    .d0{transform: rotate(-9.9817deg);}
+    .d1{transform: rotate(-6.5deg);}
+    .i{transform: rotate(-2deg);}
+    .n{transform: rotate(0.5deg);}
+    .g{transform: rotate(4.8014deg);}
+    .d2{transform: rotate(11.2021deg);}
+    .a{transform: rotate(14.843deg);}
+    .y{transform: rotate(18.843deg);}
+}
+
+
 //표지
 .cover{
     .wrapper{
@@ -39,9 +60,9 @@ section{
     .upper,
     .sub{
         color: $pointColor;
+    }
+    .upper{
         font-family: 'Great Vibes', cursive;
-        p{
-        }
     }
     .main{
         margin-top: 6vh;
@@ -250,7 +271,7 @@ section{
 .traffic{
     .means{
         font-size: 3vw;
-        // font-family: "NotoSansKR", sans-serif;
+        // font-family: "NotoSansKR", sans-serif;   
     }
     .info{
         line-height: 24px;

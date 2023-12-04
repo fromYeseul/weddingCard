@@ -66,7 +66,6 @@ h1, h2, h3, h4, h5, h6, p {
   src: url(../font/NotoSansKR-Medium.woff) format("woff");
 }
 body {
-  max-width: 47.4375rem;
   min-width: 22.5rem;
 }
 
@@ -86,12 +85,53 @@ section.contWrapper {
   background: #f8f9f8;
 }
 
+.arch {
+  height: 20px;
+  position: relative;
+}
+.arch span {
+  position: absolute;
+  transform-origin: center 7.89474em 0px;
+}
+.arch .w {
+  transform: rotate(-17.157deg);
+}
+.arch .e {
+  transform: rotate(-13.4275deg);
+}
+.arch .d0 {
+  transform: rotate(-9.9817deg);
+}
+.arch .d1 {
+  transform: rotate(-6.5deg);
+}
+.arch .i {
+  transform: rotate(-2deg);
+}
+.arch .n {
+  transform: rotate(0.5deg);
+}
+.arch .g {
+  transform: rotate(4.8014deg);
+}
+.arch .d2 {
+  transform: rotate(11.2021deg);
+}
+.arch .a {
+  transform: rotate(14.843deg);
+}
+.arch .y {
+  transform: rotate(18.843deg);
+}
+
 .cover .wrapper {
   text-align: center;
 }
 .cover .upper,
 .cover .sub {
   color: #edd2ad;
+}
+.cover .upper {
   font-family: "Great Vibes", cursive;
 }
 .cover .main {
