@@ -31,7 +31,28 @@ body{
     }
 }
 
-
+//패럴럭스
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+body {
+    overflow: auto;
+    perspective: 1px;
+    .cover{
+        transform: translateZ(0.4px) scale(0.6);
+        top: 0;
+        left: 0;    
+    }
+    .contWrapper{
+        transform: translateZ(-1px) scale(1.98);
+        position: absolute;
+        top: rem(1890);
+    }
+}
 
 section{
     &.cover{
@@ -387,3 +408,8 @@ section{
     background: url(../img/endBg.png) bottom center;
     background-repeat-y: no-repeat;
 }
+
+
+
+
+
