@@ -13,62 +13,36 @@ $black : #222;
 body{
     // max-width: rem(759);
     min-width: rem(360);
-    &::-webkit-scrollbar {
-        width: 10px;
-        height: 10px;
-    }
-    &::-webkit-scrollbar-track {
-        border-radius: 5px;
-        background-color: $bgColor;
-    }
-    &::-webkit-scrollbar-thumb {
-        border-radius: 6px;
-        background-color: $secondaryColor;
-    }
-    &::-webkit-scrollbar-button {
-        width: 0;
-        height: 0;
-    }
 }
-
-//패럴럭스
-html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-body {
-    overflow: auto;
-    perspective: 1px;
-    .cover{
-        transform: translateZ(0.4px) scale(0.6);
-        top: 0;
-        left: 0;    
-    }
-    .contWrapper{
-        transform: translateZ(-1px) scale(1.98);
-        position: absolute;
-        top: rem(1890);
-    }
-}
-
 section{
-    &.cover{
-        padding: 15vh 15vw;
-        height: 80vh;
-        border-bottom-left-radius: rem(100);
-        border-bottom-right-radius: rem(100);
-        background: url(../img/mainBg.jpg) no-repeat;
-        background-position: bottom center;
-        background-size: cover;
-        box-shadow: 1px 5px 10px rgba(0,0,0,0.4);
+    &.coverWrapper{
+        // height: 100vh;
         position: relative;
         z-index: 10;
+        transition: all .5s;
+        .cover{
+            padding: 15vh 15vw;
+            height: 80vh;
+            border-bottom-left-radius: rem(100);
+            border-bottom-right-radius: rem(100);
+            background: url(../img/mainBg.jpg) no-repeat;
+            background-position: bottom center;
+            background-size: cover;
+            box-shadow: 1px 5px 10px rgba(0,0,0,0.4);
+            // position: relative;
+        }
     }
+    
     &.contWrapper{
-        background: $bgColor;
+        height: 100vh;
+        overflow-y: auto;
+        position: absolute;
+        top: 0;
+        .contBox{
+            background: $bgColor;
+            // position: absolute;
+            // top: 0;
+        }
     }
     .upper,
     .sub{
@@ -78,25 +52,6 @@ section{
     }
 }
 
-//weddingday
-.arch{
-    height: 24px;
-    position: relative;
-    span{
-        position: absolute;
-        transform-origin: center 7.89474em 0px;
-    }
-    .w{transform: rotate(-17.157deg);}
-    .e{transform: rotate(-13.4275deg);}
-    .d0{transform: rotate(-9.9817deg);}
-    .d1{transform: rotate(-6.5deg);}
-    .i{transform: rotate(-2deg);}
-    .n{transform: rotate(0.5deg);}
-    .g{transform: rotate(4.8014deg);}
-    .d2{transform: rotate(11.2021deg);}
-    .a{transform: rotate(14.843deg);}
-    .y{transform: rotate(18.843deg);}
-}
 
 
 //표지
@@ -152,7 +107,7 @@ section{
 }
 
 //내부
-.contWrapper{
+.contBox{
     > div{        
         padding: rem(60) rem(30);
         &.ending{
@@ -181,7 +136,26 @@ section{
     .cont{
         margin-top: rem(50);
         color: $mainColor;
-    }    
+    }   
+    //weddingday
+    .arch{
+        height: 24px;
+        position: relative;
+        span{
+            position: absolute;
+            transform-origin: center 7.89474em 0px;
+        }
+        .w{transform: rotate(-17.157deg);}
+        .e{transform: rotate(-13.4275deg);}
+        .d0{transform: rotate(-9.9817deg);}
+        .d1{transform: rotate(-6.5deg);}
+        .i{transform: rotate(-2deg);}
+        .n{transform: rotate(0.5deg);}
+        .g{transform: rotate(4.8014deg);}
+        .d2{transform: rotate(11.2021deg);}
+        .a{transform: rotate(14.843deg);}
+        .y{transform: rotate(18.843deg);}
+    } 
 }
 
 //초대말

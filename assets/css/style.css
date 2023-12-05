@@ -51,64 +51,16 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-@font-face {
-  font-display: swap;
-  font-family: "NotoSansKR";
-  font-style: normal;
-  font-weight: 400;
-  src: url(../font/NotoSansKR-Regular.woff) format("woff");
-}
-@font-face {
-  font-display: swap;
-  font-family: "NotoSansKR";
-  font-style: medium;
-  font-weight: 500;
-  src: url(../font/NotoSansKR-Medium.woff) format("woff");
-}
 body {
   min-width: 22.5rem;
 }
-body::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-}
-body::-webkit-scrollbar-track {
-  border-radius: 5px;
-  background-color: #f8f9f8;
-}
-body::-webkit-scrollbar-thumb {
-  border-radius: 6px;
-  background-color: #acb0b6;
-}
-body::-webkit-scrollbar-button {
-  width: 0;
-  height: 0;
-}
 
-html, body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
+section.coverWrapper {
+  position: relative;
+  z-index: 10;
+  transition: all 0.5s;
 }
-
-body {
-  overflow: auto;
-  perspective: 1px;
-}
-body .cover {
-  transform: translateZ(0.4px) scale(0.6);
-  top: 0;
-  left: 0;
-}
-body .contWrapper {
-  transform: translateZ(-1px) scale(1.98);
-  position: absolute;
-  top: 118.125rem;
-}
-
-section.cover {
+section.coverWrapper .cover {
   padding: 15vh 15vw;
   height: 80vh;
   border-bottom-left-radius: 6.25rem;
@@ -117,10 +69,14 @@ section.cover {
   background-position: bottom center;
   background-size: cover;
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.4);
-  position: relative;
-  z-index: 10;
 }
 section.contWrapper {
+  height: 100vh;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+}
+section.contWrapper .contBox {
   background: #f8f9f8;
 }
 section .upper,
@@ -128,45 +84,6 @@ section .sub {
   text-align: center;
   color: #edd2ad;
   font-family: "Great Vibes", cursive;
-}
-
-.arch {
-  height: 24px;
-  position: relative;
-}
-.arch span {
-  position: absolute;
-  transform-origin: center 7.89474em 0px;
-}
-.arch .w {
-  transform: rotate(-17.157deg);
-}
-.arch .e {
-  transform: rotate(-13.4275deg);
-}
-.arch .d0 {
-  transform: rotate(-9.9817deg);
-}
-.arch .d1 {
-  transform: rotate(-6.5deg);
-}
-.arch .i {
-  transform: rotate(-2deg);
-}
-.arch .n {
-  transform: rotate(0.5deg);
-}
-.arch .g {
-  transform: rotate(4.8014deg);
-}
-.arch .d2 {
-  transform: rotate(11.2021deg);
-}
-.arch .a {
-  transform: rotate(14.843deg);
-}
-.arch .y {
-  transform: rotate(18.843deg);
 }
 
 .cover .wrapper {
@@ -216,15 +133,15 @@ section .sub {
   margin-top: 3vh;
 }
 
-.contWrapper > div {
+.contBox > div {
   padding: 3.75rem 1.875rem;
 }
-.contWrapper > div.ending {
+.contBox > div.ending {
   padding-bottom: 11.25rem;
   letter-spacing: 1px;
   font-family: "Great Vibes", cursive;
 }
-.contWrapper h3 {
+.contBox h3 {
   color: #acb0b6;
   font-size: 1rem;
   font-family: "NotoSansKR", sans-serif;
@@ -232,7 +149,7 @@ section .sub {
   text-transform: uppercase;
   position: relative;
 }
-.contWrapper h3::after {
+.contBox h3::after {
   content: "";
   width: 8px;
   height: 2px;
@@ -241,9 +158,47 @@ section .sub {
   bottom: -15px;
   left: 0;
 }
-.contWrapper .cont {
+.contBox .cont {
   margin-top: 3.125rem;
   color: #656b75;
+}
+.contBox .arch {
+  height: 24px;
+  position: relative;
+}
+.contBox .arch span {
+  position: absolute;
+  transform-origin: center 7.89474em 0px;
+}
+.contBox .arch .w {
+  transform: rotate(-17.157deg);
+}
+.contBox .arch .e {
+  transform: rotate(-13.4275deg);
+}
+.contBox .arch .d0 {
+  transform: rotate(-9.9817deg);
+}
+.contBox .arch .d1 {
+  transform: rotate(-6.5deg);
+}
+.contBox .arch .i {
+  transform: rotate(-2deg);
+}
+.contBox .arch .n {
+  transform: rotate(0.5deg);
+}
+.contBox .arch .g {
+  transform: rotate(4.8014deg);
+}
+.contBox .arch .d2 {
+  transform: rotate(11.2021deg);
+}
+.contBox .arch .a {
+  transform: rotate(14.843deg);
+}
+.contBox .arch .y {
+  transform: rotate(18.843deg);
 }
 
 .invitation .greeting {
