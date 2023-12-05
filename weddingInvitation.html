@@ -318,18 +318,19 @@
         });
 
         window.addEventListener('touchmove', function(e) {
-        var deltaY = e.touches[0].clientY - startY;
+            var deltaY = e.touches[0].clientY - startY;
 
-        if (deltaY > 0) {
-            requestAnimationFrame(function() {
-                coverWrapper.style.top = '-80vh';
-            });
-        } else if (deltaY < 0 && contWrapper.scrollTop === 0) {
-            requestAnimationFrame(function() {
-                coverWrapper.style.top = '0vh';
-            });
-        }
+            if (deltaY > 0) {
+                requestAnimationFrame(function() {
+                    coverWrapper.style.top = '0vh';
+                });
+            } else if (deltaY < 0 && contWrapper.scrollTop === 0) {
+                requestAnimationFrame(function() {
+                    coverWrapper.style.top = '-80vh';
+                });
+            }
         });
+
     </script>
 </body>
 </html>
