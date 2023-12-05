@@ -301,7 +301,7 @@
         var contWrapper = document.querySelector('.contWrapper');
         // var contBox = document.querySelector('.contBox');
 
-        window.addEventListener('wheel', function(e){
+        window.addEventListener('touchmove', function(e){
             
             if(e.deltaY >0){
                 requestAnimationFrame(coverWrapper.style.top = -80 + 'vh');
