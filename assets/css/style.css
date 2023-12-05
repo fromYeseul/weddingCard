@@ -58,7 +58,7 @@ body {
 section.coverWrapper {
   position: relative;
   z-index: 10;
-  transition: all 1s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 section.coverWrapper .cover {
   padding: 15vh 15vw;
@@ -410,7 +410,6 @@ h3 {
 
 .modalLayer {
   position: absolute;
-  display: none;
   visibility: hidden;
   z-index: 1000;
   position: fixed;
@@ -421,8 +420,12 @@ h3 {
   right: 0;
 }
 .modalLayer.is-active {
-  display: block;
   visibility: visible;
+}
+.modalLayer.is-active .layerBox {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .modalLayer .layerBox {
   position: relative;
@@ -432,10 +435,11 @@ h3 {
   overflow-y: auto;
   background: #fff;
   border-radius: 0.625rem;
-  top: 50%;
+  top: 100vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0);
   z-index: 100;
+  transition: all 0.4s ease-in-out;
 }
 .modalLayer .layerDim {
   position: absolute;
@@ -446,29 +450,59 @@ h3 {
   background: rgba(0, 0, 0, 0.5);
   z-index: 5;
 }
-.modalLayer .contact {
+.modalLayer .contact .modalCont {
   color: #656b75;
   margin: 2.5rem 0 1.25rem 0;
 }
-.modalLayer .contact .grid {
+.modalLayer .contact .modalCont .grid {
   display: grid;
   row-gap: 1.5625rem;
   grid-template-columns: repeat(2, 1fr);
   text-align: center;
 }
-.modalLayer .contact .groom,
-.modalLayer .contact .bride {
+.modalLayer .contact .modalCont .groom,
+.modalLayer .contact .modalCont .bride {
   margin-bottom: 0.9375rem;
 }
-.modalLayer .contact b {
+.modalLayer .contact .modalCont b {
   font-size: 1.125rem;
   color: #222;
 }
-.modalLayer .contact .icoBox {
+.modalLayer .contact .modalCont .icoBox {
   margin-top: 0.9375rem;
 }
-.modalLayer .contact .icoBox a {
+.modalLayer .contact .modalCont .icoBox a {
   padding: 0.3125rem 0.625rem;
+}
+.modalLayer .galleryP {
+  padding: 0;
+}
+.modalLayer .galleryP .swiper-slide {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+}
+.modalLayer .galleryP .swiper-slide img {
+  width: 100%;
+}
+.modalLayer .galleryP .swiper-slide p {
+  width: 100%;
+  padding: 1.25rem 0.625rem 1.5625rem;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0));
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.modalLayer .galleryP .swiper-pagination-bullet {
+  background: #fff;
+}
+
+.swiper-wrapper::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .ico {
