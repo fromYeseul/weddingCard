@@ -403,8 +403,8 @@ section .sub {
 .ending {
   text-align: center;
   color: #acb0b6;
-  background: url(../img/endBg.png) bottom center;
-  background-repeat-y: no-repeat;
+  background: url(../img/endBg.png) bottom center no-repeat;
+  background-repeat: repeat-x;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -379,8 +379,8 @@ section{
 .ending{
     text-align: center;
     color: $secondaryColor;
-    background: url(../img/endBg.png) bottom center;
-    background-repeat-y: no-repeat;
+    background: url(../img/endBg.png) bottom center no-repeat;
+    background-repeat: repeat-x;
 }
 
 
