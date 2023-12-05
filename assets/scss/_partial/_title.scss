@@ -392,9 +392,9 @@ h3{
 
 //팝업
 .modalLayer{
-    // position: absolute;
-    // display: none;
-    // visibility: hidden;
+    position: absolute;
+    display: none;
+    visibility: hidden;
     z-index: 1000;    
 
     position: fixed;
@@ -403,6 +403,10 @@ h3{
     top: 0;
     left: 0;
     right: 0;
+    &.is-active{
+        display: block;
+        visibility: visible;
+    }
     .layerBox{
         position: relative;
         padding: rem(30) rem(20);
@@ -447,9 +451,7 @@ h3{
         .icoBox{
             margin-top: rem(15);
             a{
-                & + a{
-                    margin-left: rem(10);
-                }
+                padding: rem(5) rem(10);
             }
         }
     }

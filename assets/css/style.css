@@ -409,6 +409,9 @@ h3 {
 }
 
 .modalLayer {
+  position: absolute;
+  display: none;
+  visibility: hidden;
   z-index: 1000;
   position: fixed;
   width: 100%;
@@ -416,6 +419,10 @@ h3 {
   top: 0;
   left: 0;
   right: 0;
+}
+.modalLayer.is-active {
+  display: block;
+  visibility: visible;
 }
 .modalLayer .layerBox {
   position: relative;
@@ -460,8 +467,8 @@ h3 {
 .modalLayer .contact .icoBox {
   margin-top: 0.9375rem;
 }
-.modalLayer .contact .icoBox a + a {
-  margin-left: 0.625rem;
+.modalLayer .contact .icoBox a {
+  padding: 0.3125rem 0.625rem;
 }
 
 .ico {
