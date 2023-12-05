@@ -311,7 +311,6 @@
 
         var coverWrapper = document.querySelector('.coverWrapper');
         var contWrapper = document.querySelector('.contWrapper');
-        var contBox = document.querySelector('.contBox');
         var startY;
 
         window.addEventListener('touchstart', function(e) {
@@ -324,11 +323,14 @@
 
             if (deltaY > 0 && contWrapper.scrollTop < 30) {
                 requestAnimationFrame(function() {
-                    coverWrapper.style.top = '0';
+                    // coverWrapper.style.top = '0';
+                    coverWrapper.style.transform = 'translateY(' + 0 + 'vh)';
                 });
             } else if (deltaY < 0) {
                 requestAnimationFrame(function() {
-                    coverWrapper.style.top = '-78vh';
+                    // coverWrapper.style.top = '-78vh';
+                    coverWrapper.style.transform = 'translateY(' + -78 + 'vh)';
+                    
                 });
             }
         });
