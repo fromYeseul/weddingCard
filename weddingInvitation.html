@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no;">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -278,7 +278,7 @@
     </section>
 
     <!--카카오지도 api-->
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=accb173c11a2b0967e7e4dabe0152d0a"></script>
+	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=accb173c11a2b0967e7e4dabe0152d0a"></script>
 	<script>
 		var container = document.getElementById('map');
 		var options = {
@@ -293,22 +293,43 @@
         });
 
         marker.setMap(map);
-	</script>
+	</script> -->
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     
     <script>
+        // var coverWrapper = document.querySelector('.coverWrapper');
+        // var contWrapper = document.querySelector('.contWrapper');
+
+        // window.addEventListener('touchmove', function(e){
+            
+        //     if(e.deltaY >0){
+        //         requestAnimationFrame(coverWrapper.style.top = -80 + 'vh');
+        //     }else if(e.deltaY < 0 && contWrapper.scrollTop == 0){
+        //         requestAnimationFrame(coverWrapper.style.top = 0 + 'vh');
+        //     }
+        // }) 
+
         var coverWrapper = document.querySelector('.coverWrapper');
         var contWrapper = document.querySelector('.contWrapper');
-        // var contBox = document.querySelector('.contBox');
+        var startY;
 
-        window.addEventListener('touchmove', function(e){
-            
-            if(e.deltaY >0){
-                requestAnimationFrame(coverWrapper.style.top = -80 + 'vh');
-            }else if(e.deltaY < 0 && contWrapper.scrollTop == 0){
-                requestAnimationFrame(coverWrapper.style.top = 0 + 'vh');
-            }
-        }) 
+        window.addEventListener('touchstart', function(e) {
+            startY = e.touches[0].clientY;
+        });
+
+        window.addEventListener('touchmove', function(e) {
+        var deltaY = e.touches[0].clientY - startY;
+
+        if (deltaY > 0) {
+            requestAnimationFrame(function() {
+                coverWrapper.style.top = '-80vh';
+            });
+        } else if (deltaY < 0 && contWrapper.scrollTop === 0) {
+            requestAnimationFrame(function() {
+                coverWrapper.style.top = '0vh';
+            });
+        }
+        });
     </script>
 </body>
 </html>
