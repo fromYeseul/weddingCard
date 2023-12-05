@@ -94,7 +94,6 @@ section .sub {
 }
 .cover .main {
   margin-top: 6vh;
-  padding: 0 3.75rem;
 }
 .cover .main .date {
   margin: 0 auto;
