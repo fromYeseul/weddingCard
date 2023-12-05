@@ -58,7 +58,6 @@ body {
 section.coverWrapper {
   position: relative;
   z-index: 10;
-  transition: all 1s;
 }
 section.coverWrapper .cover {
   padding: 15vh 15vw;
