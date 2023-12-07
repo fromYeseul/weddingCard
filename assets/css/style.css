@@ -441,6 +441,10 @@ h3 {
   z-index: 100;
   transition: all 0.4s ease-in-out;
 }
+.modalLayer .layerBox::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
 .modalLayer .layerDim {
   position: absolute;
   width: 100%;
@@ -498,11 +502,6 @@ h3 {
 }
 .modalLayer .galleryP .swiper-pagination-bullet {
   background: #fff;
-}
-
-.swiper-wrapper::-webkit-scrollbar {
-  width: 0;
-  height: 0;
 }
 
 .ico {

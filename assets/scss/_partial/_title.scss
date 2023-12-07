@@ -424,6 +424,10 @@ h3{
         transform: translate(-50%,0);
         z-index: 100;    
         transition: all .4s ease-in-out;
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
     }
     .layerDim{
         position: absolute;
@@ -489,12 +493,6 @@ h3{
         .swiper-pagination-bullet{
             background: $white;
         }
-    }
-}
-.swiper-wrapper{
-    &::-webkit-scrollbar {
-        width: 0;
-        height: 0;
     }
 }
 

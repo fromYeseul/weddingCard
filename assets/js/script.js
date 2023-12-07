@@ -10,17 +10,20 @@ function scrollE(){
 
     window.addEventListener('touchmove', function(e) {
         var deltaY = e.touches[0].clientY - startY;
-
-        if (deltaY > 0 && contWrapper.scrollTop < 30) {
-            requestAnimationFrame(function() {
-                // coverWrapper.style.top = '0';
+        console.log(contWrapper.getBoundingClientRect().top);
+        if (deltaY > 0 && contWrapper.getBoundingClientRect().top >= 0) {
+            //requestAnimationFrame(function() {
                 coverWrapper.style.transform = 'translateY(' + 0 + 'vh)';
-            });
-        } else if (deltaY < 0) {
-            requestAnimationFrame(function() {
-                // coverWrapper.style.top = '-78vh';
+            //});
+        } else if (deltaY < 0 ) {
+            //requestAnimationFrame(function() {
                 coverWrapper.style.transform = 'translateY(' + -78 + 'vh)';                    
-            });
+            //});
+            if(coverWrapper.getBoundingClientRect().top > -100){
+                contWrapper.style.overflow = "hidden";
+            }else{
+                contWrapper.style.overflow = "initial";
+            }
         }
     });
 }
