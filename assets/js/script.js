@@ -40,11 +40,6 @@ function layerPop(){
                 document.getElementById(layerID).classList.add('is-active');
             });
         }
-        // for(let j=0; j<closeBtn.length; j++){
-        //     closeBtn[j].addEventListener('click', function(){
-        //         this.closest('.modalLayer').classList.remove('is-active');
-        //     });
-        // }
 
         //외부영역 클릭시 닫힘
         let Dim = document.querySelectorAll('.layerDim');
@@ -59,3 +54,31 @@ function layerPop(){
     }
 }
 layerPop();
+
+//아코디언 on/off
+function accordion(){    
+    let accHead = document.querySelectorAll(".accHead");
+
+    for(let i=0; i<accHead.length; i++){
+        accHead[i].addEventListener('click', function(){
+            this.closest('.accBox').classList.toggle('is-active');
+        })
+    }
+}
+accordion();
+
+function copyAccount(){
+    let copyBtn = document.querySelectorAll('.copyAcc');
+
+    for(let i=0; i<copyBtn.length; i++){
+        copyBtn[i].addEventListener('click', function(){
+            // console.log(this.parentNode.childNodes);
+            console.log(this.closest('li'));
+            console.log(this.closest('li').getElementsByClassName('accountNum')[0]);
+            console.log(this.closest('li').querySelector('.accountNum'));
+            //console.log(this.closest('li').getElementsByClassName('accountNum').innerText());
+            console.log(this.closest('li').querySelector('.accountNum').textContent());
+        })
+    }
+}
+copyAccount();
