@@ -357,6 +357,9 @@ h3 {
   transform: rotate(180deg);
 }
 .account .accBox.is-active .accBody {
+  height: auto;
+}
+.account .accBox.is-active .accBody ul {
   display: block;
 }
 .account .accBox + .accBox {
@@ -377,9 +380,13 @@ h3 {
   transform: translateY(-50%);
 }
 .account .accBody {
-  display: none;
+  height: 0;
   padding: 0 1.25rem;
   text-align: left;
+  transition: all 0.2s;
+}
+.account .accBody ul {
+  display: none;
 }
 .account .accBody li {
   padding: 1.25rem 0;
@@ -470,7 +477,6 @@ h3 {
 }
 .modalLayer .contact .modalCont b {
   font-size: 1.125rem;
-  color: #222;
 }
 .modalLayer .contact .modalCont .icoBox {
   margin-top: 0.9375rem;

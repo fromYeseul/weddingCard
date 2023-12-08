@@ -33,22 +33,27 @@ function layerPop(){
     let openBtn = document.querySelectorAll(".layerOpen");
     let layerID;
     if(openBtn !== null){
-        for(let i=0; i<openBtn.length; i++){
-            openBtn[i].addEventListener("click", function(){
+
+
+        openBtn.forEach(function(open){
+            open.addEventListener('click', function(){
                 layerID = this.getAttribute("aria-controls");
                 console.log(layerID);
                 document.getElementById(layerID).classList.add('is-active');
-            });
-        }
+            })
+        })
+
+        
 
         //외부영역 클릭시 닫힘
         let Dim = document.querySelectorAll('.layerDim');
 
-        for(let k=0; k<Dim.length; k++){
-            Dim[k].addEventListener('click', function(){
+        Dim.forEach(function(layerDim){
+            layerDim.addEventListener('click', function(){
                 this.closest('.modalLayer').classList.remove('is-active');
             })
-        }
+        })
+
     }else{
         return;
     }
@@ -59,26 +64,35 @@ layerPop();
 function accordion(){    
     let accHead = document.querySelectorAll(".accHead");
 
-    for(let i=0; i<accHead.length; i++){
-        accHead[i].addEventListener('click', function(){
+    accHead.forEach(function(acc){
+        acc.addEventListener('click', function(){
             this.closest('.accBox').classList.toggle('is-active');
         })
-    }
+    })
 }
 accordion();
 
-function copyAccount(){
-    let copyBtn = document.querySelectorAll('.copyAcc');
 
-    for(let i=0; i<copyBtn.length; i++){
-        copyBtn[i].addEventListener('click', function(){
-            // console.log(this.parentNode.childNodes);
-            console.log(this.closest('li'));
-            console.log(this.closest('li').getElementsByClassName('accountNum')[0]);
-            console.log(this.closest('li').querySelector('.accountNum'));
-            //console.log(this.closest('li').getElementsByClassName('accountNum').innerText());
-            console.log(this.closest('li').querySelector('.accountNum').textContent());
-        })
+//계좌번호 복사
+function copyAccount(){
+    var copyButtons = document.querySelectorAll('.copyAcc');
+
+    copyButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            var accountNum = this.previousElementSibling.querySelector('.accountNum').innerText;
+            copyTextToClipboard(accountNum);
+        });
+    });
+
+    function copyTextToClipboard(text) {
+        navigator.clipboard.writeText(text)
+            .then(function() {
+                alert('계좌번호가 복사되었습니다.');
+                console.log('텍스트가 클립보드에 복사되었습니다.');
+            })
+            .catch(function(err) {
+                alert('계좌번호 복사 실패:', err);
+            });
     }
 }
 copyAccount();

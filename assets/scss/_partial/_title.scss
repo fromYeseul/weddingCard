@@ -331,7 +331,11 @@ h3{
                 }
             }
             .accBody{
-                display: block;
+                //display: block;
+                height: auto;
+                ul{
+                    display: block;
+                }
             }
         }
         & + .accBox{
@@ -353,9 +357,14 @@ h3{
         }
     }
     .accBody{
-        display: none;
+        //display: none;
+        height: 0;
         padding: 0 rem(20);
         text-align: left;
+        transition: all .2s;
+        ul{
+            display: none;
+        }
         li{
             padding: rem(20) 0;
             line-height: 30px;
@@ -456,7 +465,6 @@ h3{
             }
             b{
                 font-size: rem(18);
-                color: $black;
             }
             .icoBox{
                 margin-top: rem(15);
