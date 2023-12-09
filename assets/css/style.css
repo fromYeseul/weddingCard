@@ -201,6 +201,9 @@ h3 {
   left: 0;
 }
 
+.invitation {
+  font-size: 22px;
+}
 .invitation .greeting {
   margin-top: 1.5625rem;
   line-height: 1.6;
