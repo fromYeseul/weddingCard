@@ -1,3 +1,4 @@
+//첫장열기
 function scrollE(){
     var coverWrapper = document.querySelector('.coverWrapper');
     var contWrapper = document.querySelector('.contWrapper');
@@ -17,7 +18,7 @@ function scrollE(){
             //});
         } else if (deltaY < 0 ) {
             //requestAnimationFrame(function() {
-                coverWrapper.style.transform = 'translateY(' + -78 + 'vh)';                    
+                coverWrapper.style.transform = 'translateY(' + -85 + 'vh)';                    
             //});
             if(coverWrapper.getBoundingClientRect().top > -100){
                 contWrapper.style.overflow = "hidden";
@@ -29,22 +30,19 @@ function scrollE(){
 }
 scrollE();
 
+
+//레이어팝업
 function layerPop(){
     let openBtn = document.querySelectorAll(".layerOpen");
     let layerID;
     if(openBtn !== null){
-
-
         openBtn.forEach(function(open){
             open.addEventListener('click', function(){
                 layerID = this.getAttribute("aria-controls");
                 console.log(layerID);
                 document.getElementById(layerID).classList.add('is-active');
             })
-        })
-
-        
-
+        })      
         //외부영역 클릭시 닫힘
         let Dim = document.querySelectorAll('.layerDim');
 
@@ -53,12 +51,12 @@ function layerPop(){
                 this.closest('.modalLayer').classList.remove('is-active');
             })
         })
-
     }else{
         return;
     }
 }
 layerPop();
+
 
 //아코디언 on/off
 function accordion(){    
