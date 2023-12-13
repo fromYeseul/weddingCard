@@ -85,11 +85,10 @@ function copyAccount(){
     function copyTextToClipboard(text) {
         navigator.clipboard.writeText(text)
             .then(function() {
-                alert('계좌번호가 복사되었습니다.');
                 console.log('텍스트가 클립보드에 복사되었습니다.');
             })
             .catch(function(err) {
-                alert('계좌번호 복사 실패:', err);
+                console.log('복사를 실패하였습니다.');
             });
     }
 }
