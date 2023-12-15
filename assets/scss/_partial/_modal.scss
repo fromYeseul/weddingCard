@@ -67,6 +67,9 @@
         }
         h3{
             font-size: rem(20);
+            &::after{
+                display: none;
+            }
         }
         .modalCont{            
             color: $mainColor;

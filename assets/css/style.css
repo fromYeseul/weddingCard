@@ -702,6 +702,9 @@ button {
 .modalLayer .contact h3 {
   font-size: 1.25rem;
 }
+.modalLayer .contact h3::after {
+  display: none;
+}
 .modalLayer .contact .modalCont {
   color: #656b75;
   margin: 2.5rem 0 1.25rem 0;
