@@ -43,7 +43,6 @@ const letItSnow = () => {
         snowflake.setAttribute('r', getRandom(1,6));
     })
 };
-
 letItSnow();
 
 //레이어팝업

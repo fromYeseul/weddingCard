@@ -10,32 +10,32 @@
     height: 100%;
   }
   
-  circle {
+circle {
     fill: rgb(224, 233, 238); 
     animation-name: snowing;
-    animation-duration: 7s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-out;
     &:nth-child(2n){
-      animation-delay: 3.5s;
+        animation-delay: 8s;
     }
     &:nth-child(3n){
-      animation-delay: 5.3s;
-      animation-duration: 3.3s;
+        animation-delay: 8s;
+        animation-duration: 8s;
     }
     &:nth-child(4n){
-      animation-delay: 2.8s;
-      animation-duration: 3.2s;
+        animation-delay: 6s;
+        animation-duration: 10s;
     }
     &:nth-child(5n){
-      animation-delay: 2.8s;
+        animation-delay: 10s;
     }
-  }
+}
   
-  @keyframes snowing {
+@keyframes snowing {
     0%{ fill-opacity: 1; }
     100% { 
-      fill-opacity: 0.4;
+      fill-opacity: 0.3;
       transform: translateY(100%);
     }
-  }
+}
