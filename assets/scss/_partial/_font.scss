@@ -1,0 +1,29 @@
+
+@font-face{
+    font-display: swap; //선랜더링 후폰트적용
+    font-family: "GowunBatang";
+    font-style: normal;
+    font-weight: 500;
+    src: url(../font/GowunBatang-Regular.woff) format('woff');
+}
+@font-face{
+    font-display: swap;
+    font-family: "GowunBatang";
+    font-style: bold;
+    font-weight: 700;
+    src: url(../font/GowunBatang-Bold.woff) format('woff');
+}
+@font-face{
+    font-display: swap;
+    font-family: "GreatVibes";
+    font-style: normal;
+    font-weight: 500;
+    src: url(../font/GreatVibes-Regular.woff) format('woff');
+}
+@font-face{
+    font-display: swap;
+    font-family: "HedvigLettersSerif";
+    font-style: normal;
+    font-weight: 500;
+    src: url(../font/HedvigLettersSerif-Regular-VariableFont_opsz.woff) format('woff');
+}

@@ -1,0 +1,14 @@
+.ico{
+    display: inline-block;
+    vertical-align: middle;
+    &.tel{
+        width: rem(24);
+        height: rem(24);
+        background-image: url(../img/call.svg);
+    }
+    &.sms{
+        width: rem(24);
+        height: rem(24);
+        background-image: url(../img/sms.svg);
+    }
+}

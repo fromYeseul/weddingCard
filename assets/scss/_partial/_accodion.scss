@@ -1,0 +1,74 @@
+
+.accWrap{
+    margin-top: rem(40);
+    .accBox{
+        width: 100%;
+        text-align: center;
+        background: $white;
+        border-radius: 6px;
+        border: 1px solid $secondaryColor;
+        &.is-active{
+            padding: 0;
+            .accHead{
+                border-bottom: 1px solid $secondaryColor;
+                &::after{
+                    top: 45%;
+                    transform: rotate(180deg);
+                }
+            }
+            .accBody{
+                //display: block;
+                height: auto;
+                ul{
+                    display: block;
+                }
+            }
+        }
+        & + .accBox{
+            margin-top: rem(20);
+        }
+    }
+    .accHead{
+        padding: rem(6) rem(10);
+        position: relative;
+        &::after{
+            content:'';
+            width: 9px;
+            height: 6px;
+            background: url(../\img/arrow.png) no-repeat;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    .accBody{
+        //display: none;
+        height: 0;
+        padding: 0 rem(20);
+        text-align: left;
+        transition: all .2s;
+        ul{
+            display: none;
+        }
+        li{
+            padding: rem(15) rem(4);
+            line-height: 34px;
+            position: relative;
+            & + li{
+                border-top: 1px solid $secondaryColor;
+            }
+        }
+        button{
+            padding: rem(3) rem(9);
+            color: $mainColor;
+            font-size: rem(13);
+            background: transparent;
+            border-radius: 4px;
+            border: 1px solid $secondaryColor;
+            position: absolute;
+            top: 18px;
+            right: 4px;
+        }
+    }
+}

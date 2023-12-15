@@ -18,7 +18,7 @@ function scrollE(){
             //});
         } else if (deltaY < 0 ) {
             //requestAnimationFrame(function() {
-                coverWrapper.style.transform = 'translateY(' + -85 + 'vh)';                    
+                coverWrapper.style.transform = 'translateY(' + -82 + 'vh)';                    
             //});
             if(coverWrapper.getBoundingClientRect().top > -100){
                 contWrapper.style.overflow = "hidden";
@@ -30,6 +30,21 @@ function scrollE(){
 }
 scrollE();
 
+//눈내리기
+const getRandom = (min, max) => {
+    return Math.random() * (max - min) + min;
+}
+
+const letItSnow = () => {
+    const snowflakes = document.querySelectorAll('circle');
+    snowflakes.forEach((snowflake) => {
+        snowflake.setAttribute('cx', getRandom(1,100) + '%');
+        snowflake.setAttribute('cy', '-' + getRandom(1,100));
+        snowflake.setAttribute('r', getRandom(1,6));
+    })
+};
+
+letItSnow();
 
 //레이어팝업
 function layerPop(){

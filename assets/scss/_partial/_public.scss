@@ -1,0 +1,102 @@
+//메인컬러
+$mainColor : #656b75;
+$secondaryColor : #acb0b6;
+$pointColor : #edd2ad;
+$bgColor : #f8f9f8;
+
+$white: #fff;
+$black : #222;
+$lightG : #eaeef3;
+$txtG : #283141;
+
+
+
+body{
+    // max-width: rem(759);
+    min-width: rem(360);
+}
+section{
+    &.coverWrapper{
+        position: relative;
+        z-index: 10;
+        transition: all .8s ease-in-out;
+        .cover{
+            padding: 15vh 15vw;
+            height: 85vh;
+            border-bottom-left-radius: rem(100);
+            border-bottom-right-radius: rem(100);
+            background: url(../img/mainBg.jpg) no-repeat;
+            background-position: bottom center;
+            background-size: cover;
+            box-shadow: 1px 5px 10px rgba(0,0,0,0.4);
+        }
+    }    
+    &.contWrapper{
+        height: 100vh;
+        overflow-y: auto;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        .contBox{
+            background: $bgColor;
+        }
+    }
+    .upper,
+    .sub{
+        letter-spacing: 1px;
+        color: $pointColor;
+        font-family: 'GreatVibes', cursive;
+        .year{
+            font-family: 'GowunBatang', serif;
+        }
+    }
+    //공통요소
+    .arch{
+        color: $pointColor;
+        height: 24px;
+        position: relative;
+        span{
+            position: absolute;
+            transform-origin: center 7.89474em 0px;
+        }
+        .w{transform: rotate(-18deg);}
+        .e{transform: rotate(-14deg);}
+        .d0{transform: rotate(-10.8deg);}
+        .d1{transform: rotate(-7deg);}
+        .i{transform: rotate(-3deg);}
+        .n{transform: rotate(-0.5deg);}
+        .g{transform: rotate(3.5deg);}
+        .d2{transform: rotate(8.5deg)}
+        .a{transform: rotate(12deg);}
+        .y{transform: rotate(16deg);}
+    }  
+}
+
+//내부
+.contBox{
+    > div{        
+        padding: rem(60) rem(30);
+    }
+    .cont{
+        margin-top: rem(70);
+        color: $mainColor;
+        // font-size: 18px;
+    }  
+}
+
+
+html {
+    height: 100%;
+  }
+  
+  body {
+    height: 100%;
+    background-image: 
+     linear-gradient(
+        to bottom in lch decreasing hue, 
+        lch(36% 95 281) 0%, 
+        lab(99% -148 -61) 100%
+      );
+  }
+  
+ 

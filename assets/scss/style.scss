@@ -1,7 +1,19 @@
 @charset 'UTF-8';
 
 @import '_partial/reset';
+@import '_partial/font';
 @import '_partial/function';
 // @import '_partial/mixin';
 
+@import '_partial/public';
+@import '_partial/animation';
+
+@import '_partial/table';
 @import '_partial/title';
+@import '_partial/button';
+@import '_partial/accodion';
+@import '_partial/icon';
+
+@import '_partial/pages';
+@import '_partial/slide';
+@import '_partial/modal';
