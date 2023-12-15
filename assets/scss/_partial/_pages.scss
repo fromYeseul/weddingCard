@@ -62,7 +62,7 @@
     button{   
         margin-top: rem(70);
         position: relative;
-        z-index: 1;
+        z-index: 10;
     }
 }
 
@@ -81,11 +81,12 @@
             gap: 10px;
         }
         li{
-            flex: 1 1 45%;
-            max-width: rem(250);
+            flex: 1 1 50%;
+            max-width: rem(180);
             border-radius: 50%;
             overflow: hidden;
             position: relative;
+            background: gray;
             &:after {   //??
                 content: "";
                 display: block;
