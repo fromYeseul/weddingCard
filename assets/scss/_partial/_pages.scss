@@ -59,8 +59,10 @@
             }
         }
     }
-    button{
+    button{   
         margin-top: rem(70);
+        position: relative;
+        z-index: 1;
     }
 }
 

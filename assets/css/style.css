@@ -434,6 +434,8 @@ button {
 }
 .invitation button {
   margin-top: 4.375rem;
+  position: relative;
+  z-index: 1;
 }
 
 .gallery {
