@@ -59,11 +59,6 @@
             }
         }
     }
-    button{   
-        margin-top: rem(70);
-        position: relative;
-        z-index: 10;
-    }
 }
 
 //갤러리
@@ -189,7 +184,11 @@
 }
 
 //계좌
-
+.account{    
+    button{   
+        margin-top: rem(70);
+    }
+}
 //끝
 .ending{
     padding-bottom: rem(180);            

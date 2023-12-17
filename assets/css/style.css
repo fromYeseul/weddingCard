@@ -56,14 +56,14 @@ h1, h2, h3, h4, h5, h6, p {
   font-family: "GowunBatang";
   font-style: normal;
   font-weight: 500;
-  src: url(../font/GowunBatang-Regular.woff) format("woff");
+  src: url(../font/GowunBatang-Regular.woff2) format("woff");
 }
 @font-face {
   font-display: swap;
   font-family: "GowunBatang";
   font-style: bold;
   font-weight: 700;
-  src: url(../font/GowunBatang-Bold.woff) format("woff");
+  src: url(../font/GowunBatang-Bold.woff2) format("woff");
 }
 @font-face {
   font-display: swap;
@@ -253,7 +253,7 @@ circle:nth-child(5n) {
   }
   100% {
     opacity: 0;
-    transform: translateY(100vh);
+    transform: translateY(100vh) rotate(180deg);
   }
 }
 h1 {
@@ -353,7 +353,7 @@ button {
   margin-top: 1.25rem;
 }
 .accWrap .accHead {
-  padding: 0.375rem 0.625rem;
+  padding: 0.5rem 0.625rem;
   position: relative;
 }
 .accWrap .accHead::after {
@@ -469,11 +469,6 @@ button {
   left: -10px;
   transform: translateY(-50%);
 }
-.invitation button {
-  margin-top: 4.375rem;
-  position: relative;
-  z-index: 10;
-}
 
 .gallery {
   background: #fff;
@@ -583,6 +578,10 @@ button {
   margin-bottom: 0;
   width: calc(100% + 60px);
   height: 18.75rem;
+}
+
+.account button {
+  margin-top: 4.375rem;
 }
 
 .ending {
