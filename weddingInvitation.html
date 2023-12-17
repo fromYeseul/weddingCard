@@ -104,9 +104,19 @@
                         <circle />
                         <circle />
                         <circle />
-                        <circle />
-                        <circle />
+                        <circle>
                     </svg>
+                </div>
+                <div class="snowingBox">
+                    <div class="img-snowing">
+                        <img src="assets/img/snow2.png" alt="">
+                        <img src="assets/img/snow2.png" alt="">
+                        <img src="assets/img/snow5.png" alt="">
+                        <img src="assets/img/snow.png" alt="">
+                        <img src="assets/img/snow.png" alt="">
+                        <img src="assets/img/snow2.png" alt="">
+                        <!-- <img src="assets/img/snow5.png" alt=""> -->
+                    </div>
                 </div>
 
                 <button class="layerOpen" aria-controls="contact">연락하기</button>
@@ -123,7 +133,7 @@
                     <div class="photo">
                         <ul>
                             <li><img src="assets/img/g1-1.jpg" class="layerOpen" aria-controls="gallery01" alt=""></li>
-                            <li><img src="assets/img/g2-1.jpg" class="layerOpen" aria-controls="gallery02" alt=""></li>
+                            <li><img src="assets/img/g2-2.jpg" class="layerOpen" aria-controls="gallery02" alt=""></li>
                             <li><img src="assets/img/g3-1.jpg" class="layerOpen" aria-controls="gallery03" alt=""></li>
                         </ul>
                     </div>
@@ -359,18 +369,22 @@
                 <div class="gallery-swiper">
                     <div class="swiper-wrapper">                   
                         <div class="swiper-slide gallery1-1">
-                            <p>저희를 소개합니다.</p>
+                            <p>
+                                안녕하세요.<br>
+                                저희를 소개할게요.
+                            </p>
                         </div>
                         <div class="swiper-slide gallery1-2">
                             <p>
                                 서울 토박이이지만 사투리를 잘쓰고(?)<br>
-                                평생 컴퓨터를 했어요.
+                                평생 컴퓨터랑 살줄 알았는데<br>
+                                저를 만났지 뭐예요!
                             </p>
                         </div>
                         <div class="swiper-slide gallery1-3">
                             <p>
                                 평생 부산에서 살다가<br>
-                                어느날 갑자기 상경했어요.
+                                서울남자한테 코꿸줄 모르고 상경했더랬죠.
                             </p>
                         </div>
                     </div>
@@ -390,17 +404,19 @@
                     <div class="swiper-wrapper">                   
                         <div class="swiper-slide gallery2-1">
                             <p>
-                                일하다 만나서
+                                한창 코로나 시절에<br>
+                                마스크벗은 모습도 모르고                                
                             </p>
                         </div>
                         <div class="swiper-slide gallery2-2">
                             <p>
-                                코로나 시절에<br>
+                                일하다 만나서<br>
+                                퇴근하면서 친해지고
                             </p>
                         </div>
                         <div class="swiper-slide gallery2-3">
                             <p>
-                                여름 두번,
+                                그렇게 여름 두번,
                             </p>
                         </div>
                         <div class="swiper-slide gallery2-4">
@@ -435,7 +451,9 @@
                             <p>일단 결혼합니다.</p>
                         </div>
                         <div class="swiper-slide gallery3-3">
-                            <p>저희 결혼식에 초대합니다.</p>
+                            <p>저희의 결혼을<br> 
+                                축하해주시면 감사하겠습니다 ♥
+                            </p>
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -470,7 +488,7 @@
     <script src="assets/js/swiper.js"></script>
     <script>
         const swiper = new Swiper('.gallery-swiper', {
-            loop: true,
+            //loop: true,
             autoHeight: true,
             pagination: {
                 el: '.swiper-pagination',

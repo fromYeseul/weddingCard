@@ -79,7 +79,8 @@ h1, h2, h3, h4, h5, h6, p {
   font-weight: 500;
   src: url(../font/HedvigLettersSerif-Regular-VariableFont_opsz.woff) format("woff");
 }
-body {
+body,
+.contWrapper {
   min-width: 22.5rem;
 }
 
@@ -189,6 +190,32 @@ body {
   height: 100%;
 }
 
+.img-snowing {
+  margin-top: -10vh;
+}
+.img-snowing img {
+  fill: rgb(224, 233, 238);
+  animation-name: snowing2;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+.img-snowing img:nth-child(2n) {
+  animation-delay: 8s;
+  margin-left: 120px;
+}
+.img-snowing img:nth-child(3n) {
+  animation-delay: 5s;
+  animation-duration: 18s;
+}
+.img-snowing img:nth-child(4n) {
+  animation-delay: 4s;
+}
+.img-snowing img:nth-child(5n) {
+  animation-delay: 2s;
+  animation-duration: 14s;
+}
+
 circle {
   fill: rgb(224, 233, 238);
   animation-name: snowing;
@@ -200,15 +227,15 @@ circle:nth-child(2n) {
   animation-delay: 8s;
 }
 circle:nth-child(3n) {
-  animation-delay: 8s;
-  animation-duration: 8s;
+  animation-delay: 5s;
+  animation-duration: 18s;
 }
 circle:nth-child(4n) {
-  animation-delay: 6s;
-  animation-duration: 10s;
+  animation-delay: 4s;
 }
 circle:nth-child(5n) {
-  animation-delay: 10s;
+  animation-delay: 2s;
+  animation-duration: 14s;
 }
 
 @keyframes snowing {
@@ -218,6 +245,15 @@ circle:nth-child(5n) {
   100% {
     fill-opacity: 0.3;
     transform: translateY(100%);
+  }
+}
+@keyframes snowing2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100vh);
   }
 }
 h1 {
@@ -452,11 +488,12 @@ button {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
+  row-gap: 10px;
 }
 .gallery .photo li {
-  flex: 1 1 50%;
-  max-width: 11.25rem;
+  flex: 1 1 48%;
+  max-width: 9.0625rem;
   border-radius: 50%;
   overflow: hidden;
   position: relative;

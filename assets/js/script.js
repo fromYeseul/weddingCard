@@ -41,6 +41,7 @@ const letItSnow = () => {
         snowflake.setAttribute('cx', getRandom(1,100) + '%');
         snowflake.setAttribute('cy', '-' + getRandom(1,100));
         snowflake.setAttribute('r', getRandom(1,6));
+        snowflake.setAttribute('opacity', getRandom(0,1));
     })
 };
 letItSnow();
