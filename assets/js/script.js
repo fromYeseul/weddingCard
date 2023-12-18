@@ -11,7 +11,7 @@ function scrollE(){
 
     window.addEventListener('touchmove', function(e) {
         var deltaY = e.touches[0].clientY - startY;
-        console.log(contWrapper.getBoundingClientRect().top);
+        //console.log(contWrapper.getBoundingClientRect().top);
         if (deltaY > 0 && contWrapper.getBoundingClientRect().top >= 0) {
             //requestAnimationFrame(function() {
                 coverWrapper.style.transform = 'translateY(' + 0 + 'vh)';
@@ -54,7 +54,7 @@ function layerPop(){
         openBtn.forEach(function(open){
             open.addEventListener('click', function(){
                 layerID = this.getAttribute("aria-controls");
-                console.log(layerID);
+                //console.log(layerID);
                 document.getElementById(layerID).classList.add('is-active');
             })
         })      
@@ -69,8 +69,20 @@ function layerPop(){
     }else{
         return;
     }
+
+    //눌러보세요 제거하기
+    let rootAfterStyle = document.createElement("style");
+    let gallery01 = document.querySelector('.gallery01');
+    gallery01.addEventListener('click', function(){
+        rootAfterStyle.innerHTML = `.gallery01::before{
+            display: none;
+        }`;
+    })
+    document.head.appendChild(rootAfterStyle);
 }
 layerPop();
+
+
 
 
 //아코디언 on/off

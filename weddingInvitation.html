@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
-
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Great+Vibes&family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet">-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <title>초대합니다 | 문명수 ♡ 박예슬</title>
 </head>
 <body>
@@ -59,10 +54,10 @@
                     <div class="comment">
                         결혼합니다.<br><br>
                         하얗고 고운 겨울날,<br>
-                        서로 마주보며 다져온사랑을<br>
-                        이제 함께 한 곳을바라보며<br>
+                        서로 마주보며 다져온 사랑을<br>
+                        이제 함께 한 곳을 바라보며<br>
                         걸어갈 수 있는<br>
-                        큰 사랑으로 키우고자합니다.<br>
+                        큰 사랑으로 키우고자 합니다.<br>
                         <br>
                         함께 자리하여 저희 두 사람의 앞날을<br>
                         축복해주시면 감사하겠습니다.<br>
@@ -124,7 +119,7 @@
                     </div>
                 </div>
 
-                <!-- <button class="layerOpen" aria-controls="contact">연락하기</button> -->
+                <button class="layerOpen" aria-controls="contact">연락하기</button>
             </div>
             <!--//초대말-->
 
@@ -137,9 +132,9 @@
 
                     <div class="photo">
                         <ul>
-                            <li><img src="assets/img/g1-1.jpg" class="layerOpen" aria-controls="gallery01" alt=""></li>
-                            <li><img src="assets/img/g2-2.jpg" class="layerOpen" aria-controls="gallery02" alt=""></li>
-                            <li><img src="assets/img/g3-1.jpg" class="layerOpen" aria-controls="gallery03" alt=""></li>
+                            <li class="gallery01 layerOpen" aria-controls="gallery01" alt=""><img src="assets/img/g1-1.jpg"></li>
+                            <li class="gallery02 layerOpen" aria-controls="gallery02" alt=""><img src="assets/img/g2-2.jpg"></li>
+                            <li class="gallery03 layerOpen" aria-controls="gallery03" alt=""><img src="assets/img/g3-1.jpg"></li>
                         </ul>
                     </div>
                 </div>
@@ -286,15 +281,13 @@
                                     </li>
                                     <li>
                                         <p><b>박예슬</b></p>
-                                        <p>IBK 기업은행 <span class="accountNum">048-143784-01-011</span></p>
+                                        <p>기업은행 <span class="accountNum">048-143784-01-011</span></p>
                                         <button class="copyAcc">계좌번호 복사</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                               
-                    <button class="layerOpen" aria-controls="contact">연락하기</button>
                 </div>
             </div>
             <!--//계좌-->
@@ -375,28 +368,26 @@
         <div class="layerBox galleryP">
             <div class="modalCont">
                 <div class="gallery-swiper">
-                    <div class="swiper-wrapper">                   
-                        <div class="swiper-slide gallery1-1">
-                            <p>
-                                안녕하세요.<br>
-                                저희를 소개할게요.
-                            </p>
-                        </div>
-                        <div class="swiper-slide gallery1-2">
+                    <swiper-container class="gallery1-1" auto-height="true" pagination="true">
+                        <swiper-slide>
+                            <img src="assets/img/g1-1.jpg" alt="">
+                            <p>안녕하세요.<br>저희를 소개합니다.</p>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="assets/img/g1-2.jpg" alt="">
                             <p>
                                 서울 토박이이지만 사투리를 잘쓰고(?)<br>
-                                평생 컴퓨터랑 살줄 알았는데<br>
-                                저를 만났지 뭐예요!
+                                평생 컴퓨터랑 살줄 알았는데<br>저를 만나서 장가갑니다!
                             </p>
-                        </div>
-                        <div class="swiper-slide gallery1-3">
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="assets/img/g1-3.jpg" alt="">
                             <p>
-                                평생 부산에서 살다가<br>
-                                서울남자한테 코꿸줄 모르고 상경했더랬죠.
+                                평생 부산에서 살다가<br>서른쯤 상경했었어요.<br>
+                                (서울남자한테 코꿸줄도 모르고)
                             </p>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
+                        </swiper-slide>
+                    </swiper-container>
                 </div>
             </div>
         </div>
@@ -409,36 +400,28 @@
         <div class="layerBox galleryP">
             <div class="modalCont">
                 <div class="gallery-swiper">
-                    <div class="swiper-wrapper">                   
-                        <div class="swiper-slide gallery2-1">
-                            <p>
-                                한창 코로나 시절에<br>
-                                마스크벗은 모습도 모르고                                
-                            </p>
-                        </div>
-                        <div class="swiper-slide gallery2-2">
-                            <p>
-                                일하다 만나서<br>
-                                퇴근하면서 친해지고
-                            </p>
-                        </div>
-                        <div class="swiper-slide gallery2-3">
-                            <p>
-                                그렇게 여름 두번,
-                            </p>
-                        </div>
-                        <div class="swiper-slide gallery2-4">
-                            <p>
-                                겨울 두번을 보내고
-                            </p>
-                        </div>
-                        <div class="swiper-slide gallery2-5">
-                            <p>
-                                결혼합니다.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
+                    <swiper-container class="gallery1-1" auto-height="true" pagination="true">
+                        <swiper-slide>
+                            <img src="assets/img/g2-1.jpg" alt="">
+                            <p>한창 코로나 시절에<br>마스크벗은 모습도 모르고</p>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="assets/img/g2-2.jpg" alt="">
+                            <p>같이 일하면서 친해졌어요.</p>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="assets/img/g2-3.jpg" alt="">
+                            <p>그렇게 여름 두번,</p>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="assets/img/g2-4.jpg" alt="">
+                            <p>겨울 두번을 보내고</p>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="assets/img/g2-5.jpg" alt="">
+                            <p>결혼합니다.</p>
+                        </swiper-slide>
+                    </swiper-container>
                 </div>
             </div>
         </div>
@@ -451,20 +434,20 @@
         <div class="layerBox galleryP">
             <div class="modalCont">
                 <div class="gallery-swiper">
-                    <div class="swiper-wrapper">                   
-                        <div class="swiper-slide gallery3-1">
+                    <swiper-container class="gallery1-1" auto-height="true" pagination="true">
+                        <swiper-slide>
+                            <img src="assets/img/g3-1.jpg" alt="">
                             <p>아직 프로포즈를 못받긴 했는데요..!!</p>
-                        </div>
-                        <div class="swiper-slide gallery3-2">
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="assets/img/g3-2.jpg" alt="">
                             <p>일단 결혼합니다.</p>
-                        </div>
-                        <div class="swiper-slide gallery3-3">
-                            <p>저희의 결혼을<br> 
-                                축하해주시면 감사하겠습니다 ♥
-                            </p>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img src="assets/img/g3-3.jpg" alt="">
+                            <p>저희의 결혼을<br> 축하해주시면 감사하겠습니다 ♥</p>
+                        </swiper-slide>
+                    </swiper-container>
                 </div>
             </div>
         </div>
@@ -494,13 +477,14 @@
 
         marker.setMap(map);
 	</script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     
     <script src="assets/js/script.js"></script>
     <script src="assets/js/swiper.js"></script>
-    <script>
-        const swiper = new Swiper('.gallery-swiper', {
+    <!-- <script>
+        const swiper = new Swiper('.swiper-container', {
             //loop: true,
+            sliderPerView: "auto",
+            spaceBetween:30,
             autoHeight: true,
             pagination: {
                 el: '.swiper-pagination',
@@ -512,6 +496,6 @@
             //     el: '.swiper-scrollbar',
             // },
         });
-    </script>
+    </script> -->
 </body>
 </html>
