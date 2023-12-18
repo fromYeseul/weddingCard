@@ -487,6 +487,10 @@
         var marker = new kakao.maps.Marker({
             position: markerPosition
         });
+        function setDraggable(draggable) {
+            // 마우스 드래그로 지도 이동 가능여부를 설정합니다
+            map.setDraggable(false);    
+        }
 
         marker.setMap(map);
 	</script>
