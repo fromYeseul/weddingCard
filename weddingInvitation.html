@@ -458,12 +458,14 @@
 
 
     <!--카카오지도 api-->
-	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=accb173c11a2b0967e7e4dabe0152d0a"></script>
+	<!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=accb173c11a2b0967e7e4dabe0152d0a"></script> -->
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=c28a4b1e1dd75c9bd9532a37d3f822bf"></script>
 	<script>
 		var container = document.getElementById('map');
 		var options = {
 			center: new kakao.maps.LatLng(35.186659, 129.081317),
-			level: 4
+			level: 4,
+            draggable: false
 		};
 
 		var map = new kakao.maps.Map(container, options);
@@ -471,10 +473,10 @@
         var marker = new kakao.maps.Marker({
             position: markerPosition
         });
-        function setDraggable(draggable) {
-            // 마우스 드래그로 지도 이동 가능여부를 설정합니다
-            map.setDraggable(false);    
-        }
+        // function setDraggable(draggable) {
+        //     // 마우스 드래그로 지도 이동 가능여부를 설정합니다
+        //     map.setDraggable(false);    
+        // }
 
         marker.setMap(map);
 	</script>
