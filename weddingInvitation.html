@@ -465,8 +465,7 @@
 		var options = {
 			center: new kakao.maps.LatLng(35.186659, 129.081317),
 			level: 4,
-            draggable: false, // 드래그 활성화
-            // disableDoubleClick: true // 더블 클릭 이벤트 비활성화
+            draggable: true
 		};
 
 		var map = new kakao.maps.Map(container, options);
@@ -474,32 +473,22 @@
         var marker = new kakao.maps.Marker({
             position: markerPosition
         });
-        // function setDraggable(draggable) {
-        //     // 마우스 드래그로 지도 이동 가능여부를 설정합니다
-        //     map.setDraggable(false);    
-        // }
-
-        // pinch 이벤트 핸들러 등록
-        kakao.maps.event.addListener(map, 'pinch', function () {
-            console.log('핀치 이벤트 발생!');
-            
-            // 드래그 활성화
-            map.setDraggable(true);
-
-            // 마커가 지도에 추가되지 않았다면 추가
-            if (!marker.getMap()) {
-                marker.setMap(map);
-            }
-        });
-
-        // pinch 시 드래그 이벤트 막기
-        kakao.maps.event.addListener(map, 'dragstart', function () {
-            if (map.getDraggable()) {
-                map.setDraggable(false);
-            }
-        });
 
         marker.setMap(map);
+
+        // 지도 이벤트 리스너 등록
+kakao.maps.event.addListener(map, 'dragstart', function (e) {
+  if (e.pointerType === 'touch' && e.pointers.length === 1) {
+    // 한 손가락으로의 드래그 막기
+    map.setDraggable(false);
+    console.log('test');
+  }
+});
+
+kakao.maps.event.addListener(map, 'dragend', function () {
+  // 드래그가 종료되면 다시 드래그 활성화
+  map.setDraggable(true);
+});
 	</script>
     
     <script src="assets/js/script.js"></script>
