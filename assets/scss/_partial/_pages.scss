@@ -193,10 +193,21 @@
     text-align: left;
     li{
         margin-bottom: rem(30);
+        margin-left: rem(25);
         .means{
-            margin-bottom: 3px;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
             color: $secondaryColor;
-            // font-family: "NotoSansKR", sans-serif;   
+            position: relative;
+            img{
+                width: 20px;
+                position: absolute;
+                top: 50%;
+                left: -24px;
+                transform: translateY(-50%);
+            }
         }
         .info{
             line-height: 24px;

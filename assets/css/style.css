@@ -590,10 +590,22 @@ button {
 }
 .traffic li {
   margin-bottom: 1.875rem;
+  margin-left: 1.5625rem;
 }
 .traffic li .means {
-  margin-bottom: 3px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
   color: #acb0b6;
+  position: relative;
+}
+.traffic li .means img {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  left: -24px;
+  transform: translateY(-50%);
 }
 .traffic li .info {
   line-height: 24px;

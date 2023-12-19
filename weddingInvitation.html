@@ -238,15 +238,26 @@
                     <div class="way">
                         <ul>
                             <li>
-                                <p class="means">지하철로 오시는 길</p>
+                                <p class="means subway">
+                                    <!-- <i class="ico subway"></i> -->
+                                    <img src="assets/img/subway.svg" alt="">
+                                    지하철로 오시는 길
+                                </p>
                                 <span class="info">[ 부산 1, 3호선 연산역 ] 7번 출구 도보 1분</span>
                             </li>
                             <li>
-                                <p class="means">버스로 오시는 길</p>
+                                <p class="means bus">                                    
+                                    <!-- <i class="ico bus"></i> -->
+                                    <img src="assets/img/bus.svg" alt="">
+                                    버스로 오시는 길</p>
                                 <span class="info">29, 51, 179, 189 연산역(연산교차로) 하차</span>
                             </li>
                             <li>
-                                <p class="means">자차로 오시는 길</p>
+                                <p class="means car">
+                                    <!-- <i class="ico car"></i> -->
+                                    <img src="assets/img/car.svg" alt="">
+                                    자차로 오시는 길
+                                </p>
                                 <span class="info">
                                     부산 연제구 중앙대로 1125 시티타워<br>목화웨딩컨벤션 15F 벨리스홀
                                 </span>
@@ -476,19 +487,16 @@
 
         marker.setMap(map);
 
-        // 터치 이벤트 핸들러 등록
+        // 터치 이벤트
         container.addEventListener('touchstart', function (e) {
             if (e.touches.length === 1) {
-                // 한 손가락으로의 터치일 때 드래그 막기
                 map.setDraggable(false);
             } else {
-                // 두 손가락으로의 터치일 때 드래그 허용
                 map.setDraggable(true);
             }
         });
 
         container.addEventListener('touchend', function (e) {
-            // 터치가 종료될 때 다시 드래그 활성화
             map.setDraggable(true);
         });
 	</script>
