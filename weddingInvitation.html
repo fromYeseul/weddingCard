@@ -465,7 +465,8 @@
 		var options = {
 			center: new kakao.maps.LatLng(35.186659, 129.081317),
 			level: 4,
-            draggable: false
+            draggable: false, // 드래그 활성화
+            // disableDoubleClick: true // 더블 클릭 이벤트 비활성화
 		};
 
 		var map = new kakao.maps.Map(container, options);
@@ -477,6 +478,26 @@
         //     // 마우스 드래그로 지도 이동 가능여부를 설정합니다
         //     map.setDraggable(false);    
         // }
+
+        // pinch 이벤트 핸들러 등록
+        kakao.maps.event.addListener(map, 'pinch', function () {
+            console.log('핀치 이벤트 발생!');
+            
+            // 드래그 활성화
+            map.setDraggable(true);
+
+            // 마커가 지도에 추가되지 않았다면 추가
+            if (!marker.getMap()) {
+                marker.setMap(map);
+            }
+        });
+
+        // pinch 시 드래그 이벤트 막기
+        kakao.maps.event.addListener(map, 'dragstart', function () {
+            if (map.getDraggable()) {
+                map.setDraggable(false);
+            }
+        });
 
         marker.setMap(map);
 	</script>
