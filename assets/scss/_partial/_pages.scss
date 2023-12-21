@@ -194,6 +194,7 @@
     li{
         margin-bottom: rem(30);
         margin-left: rem(25);
+        position: relative;
         .means{
             margin-bottom: 5px;
             display: flex;
@@ -211,6 +212,11 @@
         }
         .info{
             line-height: 24px;
+        }
+        button{
+            position: absolute;
+            top: 0;
+            right: 0;
         }
     }
     .map{

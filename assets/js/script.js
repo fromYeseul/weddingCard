@@ -99,14 +99,20 @@ accordion();
 
 
 //계좌번호 복사
-function copyAccount(){
-    var copyButtons = document.querySelectorAll('.copyAcc');
+function copyTxt(){
+    var copyAcc = document.querySelectorAll('.copyAcc');
+    var copyAdd = document.querySelector('.copyAdd');
 
-    copyButtons.forEach(function(button) {
+    copyAcc.forEach(function(button) {
         button.addEventListener('click', function() {
             var accountNum = this.previousElementSibling.querySelector('.accountNum').innerText;
             copyTextToClipboard(accountNum);
         });
+    });
+
+    copyAdd.addEventListener('click', function() {
+        var addressTxt = this.previousElementSibling.querySelector('.address').innerText;
+        copyTextToClipboard(addressTxt);
     });
 
     function copyTextToClipboard(text) {
@@ -119,4 +125,4 @@ function copyAccount(){
             });
     }
 }
-copyAccount();
+copyTxt();

@@ -6,4 +6,13 @@ button{
     font-size: rem(16);
     border-radius: rem(35);
     background: $secondaryColor;
+    &.copyAcc,
+    &.copyAdd{
+        padding: rem(3) rem(9);
+        color: $mainColor;
+        font-size: rem(13);
+        background: transparent;
+        border-radius: 4px;
+        border: 1px solid $secondaryColor;
+    }
 }
