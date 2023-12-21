@@ -235,7 +235,7 @@
 }
 //끝
 .ending{
-    padding-bottom: rem(180);            
+    padding-bottom: rem(180) !important;            
     letter-spacing: 1px;
     font-family: 'GreatVibes', cursive;
     color: $secondaryColor;

@@ -630,7 +630,7 @@ button.copyAcc, button.copyAdd {
 }
 
 .ending {
-  padding-bottom: 11.25rem;
+  padding-bottom: 11.25rem !important;
   letter-spacing: 1px;
   font-family: "GreatVibes", cursive;
   color: #acb0b6;
