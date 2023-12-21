@@ -128,7 +128,7 @@ function copyTxt(){
 
         if (isiPhone) {
             document.execCommand('copy');    
-            var msg = '텍스트가 클립보드에 복사되었습니다.';
+            var msg = '복사되었습니다.';
             alert(msg);
         } else {
             navigator.clipboard.writeText(text)
