@@ -169,15 +169,6 @@ section .arch .y {
   color: #656b75;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  height: 100%;
-  background-image: linear-gradient(to bottom in lch decreasing hue, lch(36% 95 281) 0%, lab(99% -148 -61) 100%);
-}
-
 .snowingBox {
   width: 100%;
   height: 80%;

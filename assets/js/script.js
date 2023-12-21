@@ -116,13 +116,29 @@ function copyTxt(){
     });
 
     function copyTextToClipboard(text) {
-        navigator.clipboard.writeText(text)
-            .then(function() {
-                console.log('텍스트가 클립보드에 복사되었습니다.');
-            })
-            .catch(function(err) {
-                console.log('복사를 실패하였습니다.');
-            });
+        // navigator.clipboard.writeText(text)
+        //     .then(function() {
+        //         console.log('텍스트가 클립보드에 복사되었습니다.');
+        //     })
+        //     .catch(function(err) {
+        //         console.log('복사를 실패하였습니다.');
+        //     });
+
+        var isiPhone = /iPhone/i.test(navigator.platform);
+
+        if (isiPhone) {
+            document.execCommand('copy');    
+            var msg = '텍스트가 클립보드에 복사되었습니다.';
+            alert(msg);
+        } else {
+            navigator.clipboard.writeText(text)
+                .then(function() {
+                    console.log('텍스트가 클립보드에 복사되었습니다.');
+                })
+                .catch(function(err) {
+                    console.log('복사를 실패하였습니다.');
+                });
+        }
     }
 }
 copyTxt();

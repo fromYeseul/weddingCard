@@ -85,19 +85,3 @@ section{
     }  
 }
 
-
-html {
-    height: 100%;
-  }
-  
-  body {
-    height: 100%;
-    background-image: 
-     linear-gradient(
-        to bottom in lch decreasing hue, 
-        lch(36% 95 281) 0%, 
-        lab(99% -148 -61) 100%
-      );
-  }
-  
- 
