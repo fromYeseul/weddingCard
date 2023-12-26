@@ -708,6 +708,7 @@ swiper-slide p {
   position: relative;
   padding: 2.5rem 1.25rem 1.875rem 1.25rem;
   width: 80%;
+  min-width: 18.125rem;
   max-height: 95%;
   overflow-y: auto;
   background: #fff;
@@ -717,6 +718,7 @@ swiper-slide p {
   transform: translate(-50%, 0);
   z-index: 100;
   transition: all 0.4s ease-in-out;
+  box-shadow: 1px 1px 50px rgba(34, 34, 34, 0.5);
 }
 .modalLayer .layerBox::-webkit-scrollbar {
   width: 0;
