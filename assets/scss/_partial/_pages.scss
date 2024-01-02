@@ -268,4 +268,38 @@
 @keyframes saveText {
     0% {background-position: -500%;}
     100% {background-position: 500%;}
-  }
+}
+
+
+@media screen and (max-height: 600px) {
+    
+    h1{
+        &.day{
+            &::before{
+                content:'';
+                width: 6px;
+                height: 6px;
+                opacity: 1;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: -20%;
+                transform: rotate(30deg) translateX(-50%);
+            }
+        }
+    }
+    .cover{
+        .main{
+            margin-top: 0;
+            .date{
+                display: flex;
+                gap: 20px;
+                padding: 0;
+                max-width: rem(120);
+            }
+            .name{
+                margin-top: 0;
+            }
+        }
+    }    
+}

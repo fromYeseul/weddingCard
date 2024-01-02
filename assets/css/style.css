@@ -92,7 +92,9 @@ section.coverWrapper {
   transition: all 0.8s ease-in-out;
 }
 section.coverWrapper .cover {
-  padding: 15vh 15vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 85vh;
   border-bottom-left-radius: 6.25rem;
   border-bottom-right-radius: 6.25rem;
@@ -658,6 +660,31 @@ button.copyAcc, button.copyAdd {
   }
   100% {
     background-position: 500%;
+  }
+}
+@media screen and (max-height: 600px) {
+  h1.day::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    opacity: 1;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -20%;
+    transform: rotate(30deg) translateX(-50%);
+  }
+  .cover .main {
+    margin-top: 0;
+  }
+  .cover .main .date {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    max-width: 7.5rem;
+  }
+  .cover .main .name {
+    margin-top: 0;
   }
 }
 swiper-container::part(bullet) {

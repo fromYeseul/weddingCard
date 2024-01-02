@@ -22,7 +22,11 @@ section{
         z-index: 10;
         transition: all .8s ease-in-out;
         .cover{
-            padding: 15vh 15vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            // padding: 15vh 15vw;
             height: 85vh;
             border-bottom-left-radius: rem(100);
             border-bottom-right-radius: rem(100);
