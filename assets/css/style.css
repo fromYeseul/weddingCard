@@ -438,6 +438,7 @@ button.copyAcc, button.copyAdd {
 
 .pImg img {
   width: 100%;
+  max-width: 90vw;
 }
 
 .invitation {
