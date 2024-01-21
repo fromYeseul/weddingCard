@@ -15,6 +15,9 @@
             span{
                 font-size: rem(16);
             }
+            & + .name{
+                margin-top: 0;
+            }
         }
     }
     .sub{
@@ -22,6 +25,12 @@
     }
 }
 
+//식장이미지
+.pImg{
+    img{
+        width: 100%;
+    }
+}
 
 //초대말
 .invitation{

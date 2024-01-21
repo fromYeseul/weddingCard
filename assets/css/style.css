@@ -103,6 +103,9 @@ section.coverWrapper .cover {
   background-size: cover;
   box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.4);
 }
+section.coverWrapper .cover.thankyou {
+  height: 99vh;
+}
 section.contWrapper {
   height: 100vh;
   overflow-y: auto;
@@ -426,8 +429,15 @@ button.copyAcc, button.copyAdd {
 .cover .main .name span {
   font-size: 1rem;
 }
+.cover .main .name + .name {
+  margin-top: 0;
+}
 .cover .sub {
   margin-top: 3vh;
+}
+
+.pImg img {
+  width: 100%;
 }
 
 .invitation {
